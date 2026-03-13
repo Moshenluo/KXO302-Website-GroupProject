@@ -1,0 +1,36 @@
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Database credentials (if any)
+db_config_local.php
+config_local.php
+.env
+
+# Uploads (if any)
+uploads/
+temp/
+
+# Composer (if used)
+vendor/
+composer.lock
+
+# Node modules (if any frontend build tools)
+node_modules/
+package-lock.json

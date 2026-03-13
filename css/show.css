@@ -1,0 +1,76 @@
+@charset "utf-8"; /* 设置字符编码为UTF-8 */  
+  
+* { /* 对所有元素应用以下样式 */  
+	padding: 0; /* 内边距设为0 */  
+	margin: 0; /* 外边距设为0 */  
+}  
+  
+body { /* 对body元素应用以下样式 */  
+	width:100%; /* 宽度设为100% */  
+}  
+  
+.main { /* 对class为main的元素应用以下样式 */  
+	width: 580px; /* 宽度设为580px */  
+	height: 600px; /* 高度设为600px */  
+	margin: 0 auto; /* 上下外边距为0，左右外边距自动调整，实现水平居中 */  
+}  
+  
+#coolShow { /* 对id为coolShow的元素应用以下样式 */  
+	width:575px; /* 宽度设为575px */  
+	height:400px; /* 高度设为400px */  
+}  
+  
+#coolShow b { /* 对id为coolShow下的b元素应用以下样式 */  
+	opacity: 0; /* 透明度设为0，即完全透明 */  
+	background: url('images/1.png') no-repeat; /* 背景图片设置为images/1.png，且不重复 */  
+	background-position: 0 0; /* 背景图片的位置设为左上角 */  
+	width: 100%; /* 宽度设为100% */  
+	height: 10px; /* 高度设为10px */  
+	display: block; /* 设置为块级元素 */  
+}  
+  
+#handBar { /* 对id为handBar的元素应用以下样式 */  
+	margin-top:50px; /* 上外边距设为50px */  
+	position: relative; /* 定位设为相对定位 */  
+}  
+  
+#handBar span { /* 对id为handBar下的span元素应用以下样式 */  
+	opacity: 0.6; /* 透明度设为0.6 */  
+	width:100px; /* 宽度设为100px */  
+	height: 100px; /* 高度设为100px */  
+	overflow: hidden; /* 溢出内容隐藏 */  
+	display: inline-block; /* 设置为内联块级元素 */  
+	border: 10px solid #217fbc; /* 边框设为10px宽，颜色为#217fbc */  
+	margin-left: 65px; /* 左外边距设为65px */  
+	cursor: pointer; /* 鼠标悬停时显示为指针样式 */  
+	border-radius: 100px; /* 边框圆角设为100px，实现圆形边框 */  
+	-ms-border-radius: 100px; /* 针对IE浏览器的圆角设置 */  
+	-moz-border-radius: 100px; /* 针对Firefox浏览器的圆角设置 */  
+	-webkit-border-radius: 100px; /* 针对Chrome和Safari浏览器的圆角设置 */  
+	-o-border-radius: 100px; /* 针对Opera浏览器的圆角设置 */  
+	transition: all 0.5s ease-in-out; /* 过渡效果设置，所有属性在0.5秒内平滑过渡 */  
+	-ms-transition: all 0.5s ease-in-out; /* 针对IE浏览器的过渡效果设置 */  
+	-moz-transition: all 0.5s ease-in-out; /* 针对Firefox浏览器的过渡效果设置 */  
+	-webkit-transition: all 0.5s ease-in-out; /* 针对Chrome和Safari浏览器的过渡效果设置 */  
+	-o-transition: all 0.5s ease-in-out; /* 针对Opera浏览器的过渡效果设置 */  
+}  
+  
+#handBar span:hover { /* 对id为handBar下的span元素在鼠标悬停时应用以下样式 */  
+	opacity: 1; /* 透明度设为1，即完全不透明 */  
+	border: 10px solid #1fcf6d; /* 边框颜色改为#1fcf6d */  
+	transform:rotate(360deg) scale(1.1); /* 旋转360度并放大到1.1倍 */  
+	-ms-transition: all 0.5s ease-in-out; /* 针对IE浏览器的过渡效果重复声明（此处有误，应为-ms-transform） */  
+	-moz-transform:rotate(360deg) scale(1.1); /* 针对Firefox浏览器的旋转和缩放设置 */  
+	-wekit-transform:rotate(360deg) scale(1.1); /* 针对Chrome和Safari浏览器的旋转和缩放设置（拼写错误，应为-webkit-transform） */  
+	-o-transform:rotate(360deg) scale(1.1); /* 针对Opera浏览器的旋转和缩放设置 */  
+}  
+  
+#handBar span img { /* 对id为handBar下的span元素内的img元素应用以下样式 */  
+	width:100%; /* 宽度设为100% */  
+	height: 100%; /* 高度设为100% */  
+}  
+  
+.WaterFallBox img { /* 对class为WaterFallBox下的img元素应用以下样式 */  
+	width:100%; /* 宽度设为100% */  
+	height:auto; /* 高度自动调整以保持比例 */  
+}

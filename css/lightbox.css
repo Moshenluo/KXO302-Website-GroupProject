@@ -1,0 +1,246 @@
+body:after {
+  /* 在 body 元素后插入三张图片路径用于预加载，设置为不显示 */
+content: url(../images/close.png) url(../images/prev.png) url(../images/next.png);
+display: none;
+}
+
+.lightboxOverlay {
+  /* 设置灯箱覆盖层的绝对位置为页面左上角，设置 z-index 为 9999，背景色为黑色，
+     使用 IE 滤镜设置透明度为 80%，设置正常透明度为 0.8，初始不显示 */
+position: absolute;
+top: 0;
+left: 0;
+z-index: 9999;
+background-color: black;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+opacity: 0.8;
+display: none;
+}
+
+.lightbox {
+  /* 设置灯箱的绝对位置为页面左侧，宽度为 100%，z-index 为 10000，文本居中对齐，
+     行高为 0，字体粗细为正常 */
+position: absolute;
+left: 0;
+width: 100%;
+z-index: 10000;
+text-align: center;
+line-height: 0;
+font-weight: normal;
+}
+
+.lightbox.lb-image {
+  /* 设置灯箱中的图像为块级元素，高度自动调整，最大宽度继承父元素，
+     设置四个方向的边框半径为 3px */
+display: block;
+height: auto;
+max-width: inherit;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+border-radius: 3px;
+}
+
+.lightbox a img {
+  /* 设置灯箱中链接的图像边框为无 */
+border: none;
+}
+
+.lb-outerContainer {
+  /* 设置灯箱外层容器为相对定位，背景色为白色，使用 *zoom: 1 处理一些浏览器兼容性问题，
+     宽度为 250px，高度为 250px，上下外边距为 5em 和 0.5em，水平居中，设置四个方向的边框半径为 4px */
+position: relative;
+background-color: white;
+*zoom: 1;
+width: 250px;
+height: 250px;
+margin:5em auto 0.5em auto;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-ms-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+}
+
+.lb-outerContainer:after {
+  /* 清除浮动，内容为空字符串，显示为表格，清除两边浮动 */
+content: "";
+display: table;
+clear: both;
+}
+
+.lb-container {
+  /* 设置灯箱内部容器的内边距为上下左右各 4px */
+padding: 4px;
+}
+
+.lb-loader {
+  /* 设置灯箱加载器为绝对定位，顶部位置为 43%，左侧为 0，高度为 25%，宽度为 100%，
+     文本居中对齐，行高为 0 */
+position: absolute;
+top: 43%;
+left: 0;
+height: 25%;
+width: 100%;
+text-align: center;
+line-height: 0;
+}
+
+.lb-cancel {
+  /* 设置灯箱取消按钮为块级元素，宽度为 32px，高度为 32px，水平居中 */
+display: block;
+width: 32px;
+height: 32px;
+margin: 0 auto;
+}
+
+.lb-nav {
+  /* 设置灯箱导航为绝对定位，顶部为 0，左侧为 0，高度为 100%，宽度为 100%，z-index 为 10 */
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+z-index: 10;
+}
+
+.lb-container >.nav {
+  /* 设置灯箱内部容器下的导航元素左侧位置为 0 */
+left: 0;
+}
+
+.lb-nav a {
+  /* 设置灯箱导航链接无轮廓，背景图像为透明 GIF */
+outline: none;
+background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+
+.lb-prev,.lb-next {
+  /* 设置上一张和下一张按钮的高度为 100%，鼠标指针为指针形状，显示为块级元素 */
+height: 100%;
+cursor: pointer;
+display: block;
+}
+
+.lb-nav a.lb-prev {
+  /* 设置上一张按钮的宽度为 34%，居左，向左浮动，背景为 prev.png 在左侧 48%位置不重复显示，
+     使用 IE 滤镜设置透明度为 0，正常透明度为 0，设置透明度过渡时间为 0.6 秒 */
+width: 34%;
+left: 0;
+float: left;
+background: url(../images/prev.png) left 48% no-repeat;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+-webkit-transition: opacity 0.6s;
+-moz-transition: opacity 0.6s;
+-o-transition: opacity 0.6s;
+transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  /* 上一张按钮鼠标悬停时，使用 IE 滤镜设置透明度为 100%，正常透明度为 1 */
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  /* 设置下一张按钮的宽度为 64%，居右，向右浮动，背景为 next.png 在右侧 48%位置不重复显示，
+     使用 IE 滤镜设置透明度为 0，正常透明度为 0，设置透明度过渡时间为 0.6 秒 */
+width: 64%;
+right: 0;
+float: right;
+background: url(../images/next.png) right 48% no-repeat;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+opacity: 0;
+-webkit-transition: opacity 0.6s;
+-moz-transition: opacity 0.6s;
+-o-transition: opacity 0.6s;
+transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  /* 下一张按钮鼠标悬停时，使用 IE 滤镜设置透明度为 100%，正常透明度为 1 */
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+opacity: 1;
+}
+
+.lb-dataContainer {
+  /* 设置灯箱数据容器的外边距为上下居中，顶部内边距为 5 像素，使用 *zoom:1 处理一些浏览器兼容性问题，
+     宽度为 100%，设置底部左侧和右侧的边框半径为 4 像素 */
+margin: 0 auto;
+padding-top: 5px;
+*zoom: 1;
+width: 100%;
+-moz-border-radius-bottomleft: 4px;
+-webkit-border-bottom-left-radius: 4px;
+border-bottom-left-radius: 4px;
+-moz-border-radius-bottomright: 4px;
+-webkit-border-bottom-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  /* 清除浮动，内容为空字符串，显示为表格，清除两边浮动 */
+content: "";
+display: table;
+clear: both;
+}
+
+.lb-data {
+  /* 设置灯箱数据的内边距为左右各 4 像素，颜色为 #ccc */
+padding: 0 4px;
+color: #ccc;
+}
+
+.lb-data.lb-details {
+  /* 设置灯箱数据详细信息的宽度为 85%，向左浮动，文本左对齐，行高为 1.1em */
+width: 85%;
+float: left;
+text-align: left;
+line-height: 1.1em;
+}
+
+.lb-data.lb-caption {
+  /* 设置灯箱数据标题的字体大小为 13 像素，字体加粗，行高为 1em */
+font-size: 13px;
+font-weight: bold;
+line-height: 1em;
+}
+
+.lb-data.lb-number {
+  /* 设置灯箱数据编号为块级元素，清除左侧浮动，底部内边距为 1em，字体大小为 12 像素，颜色为 #999999 */
+display: block;
+clear: left;
+padding-bottom: 1em;
+font-size: 12px;
+color: #999999;
+}
+
+.lb-data.lb-close {
+  /* 设置灯箱数据中的关闭按钮为块级元素，向右浮动，宽度为 30px，高度为 30px，
+     背景为 close.png 在右上角不重复显示，文本右对齐，无轮廓，使用 IE 滤镜设置透明度为 70%，
+     正常透明度为 0.7，设置透明度过渡时间为 0.2 秒 */
+display: block;
+float: right;
+width: 30px;
+height: 30px;
+background: url(../images/close.png) top right no-repeat;
+text-align: right;
+outline: none;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+opacity: 0.7;
+-webkit-transition: opacity 0.2s;
+-moz-transition: opacity 0.2s;
+-o-transition: opacity 0.2s;
+transition: opacity 0.2s;
+}
+
+.lb-data.lb-close:hover {
+  /* 当鼠标悬停在关闭按钮上时，鼠标指针变为指针形状，使用 IE 滤镜设置透明度为 100%，
+     正常透明度为 1 */
+cursor: pointer;
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+opacity: 1;
+}

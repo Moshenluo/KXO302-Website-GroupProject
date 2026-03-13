@@ -1,0 +1,3931 @@
+
+/* 设置页面中所有<a>标签的过渡效果为0.5秒，适用于所有CSS属性变化，同时添加了对不同浏览器的兼容前缀 */  
+body a {  
+    transition: 0.5s all;           /* 通用过渡效果 */  
+    -webkit-transition: 0.5s all;   /* 兼容WebKit内核浏览器，如Chrome, Safari */  
+    -o-transition: 0.5s all;        /* 兼容Opera浏览器 */  
+    -moz-transition: 0.5s all;      /* 兼容Firefox浏览器 */  
+    -ms-transition: 0.5s all;       /* 兼容IE浏览器 */  
+  }  
+    
+  /* 设置html和body的字体、字号和背景色 */  
+  html, body{  
+      font-family: 'Francois One', sans-serif; /* 字体为'Francois One'，若不存在则使用无衬线字体 */  
+      font-size: 100%;              /* 字体大小为默认大小 */  
+      background: #a8d8d8;          /* 背景色为浅蓝色 */  
+      /*background-image: url(../images/background.svg);*/ /* 背景图片，此行被注释 */  
+        
+  }  
+    
+  /* 设置“返回顶部”按钮的样式 */  
+  #back-to-top {  
+        position: fixed;            /* 固定定位 */  
+        bottom: 50%;                /* 距离底部50% */  
+        right: 20px;                /* 距离右侧20px */  
+        display: none;              /* 默认不显示 */  
+        z-index: 99;                /* 层级设为99，确保在其他元素之上 */  
+      }  
+    
+  /*-- header --*/  
+  .header{  
+      position:relative;            /* 相对定位 */  
+  }  
+    
+  /*-- top-header --*/  
+  .top-header-left{  
+      float: left;                  /* 左浮动 */  
+      width: 50%;                   /* 宽度为50% */  
+  }  
+    
+  .top-header-left p{  
+      color: #909090;               /* 文字颜色为深灰色 */  
+      font-size: 1.7em;             /* 字体大小为1.7倍 */  
+      margin: 0.5em 0 0 12em;       /* 外边距设置 */  
+      text-transform: uppercase;    /* 文字大写 */  
+      letter-spacing: 1px;          /* 字母间距 */  
+  }  
+    
+  .top-header{  
+      background: #a8d8d8;          /* 背景色为浅蓝色 */  
+      padding: .7em 0;              /* 内边距设置 */  
+  }  
+    
+  .top-header-right{  
+      float:right;                  /* 右浮动 */  
+      width:25%;                    /* 宽度为25% */  
+  }  
+    
+  .top-header-right-info{  
+      float:left;                   /* 左浮动 */  
+  }  
+    
+  .top-header-right-info ul {  
+      padding:0;                    /* 内边距为0 */  
+      margin:0;                     /* 外边距为0 */  
+  }  
+    
+  .top-header-right-info ul li{  
+      display:inline-block;         /* 行内块级元素显示 */  
+      margin:0 1em;                 /* 外边距设置 */  
+  }  
+    
+  .top-header-right-info ul li a {  
+      color: #909090;               /* 文字颜色为深灰色 */  
+      font-size: .7em;              /* 字体大小为0.7倍 */  
+      margin: 0;                    /* 外边距为0 */  
+      text-transform: uppercase;    /* 文字大写 */  
+      letter-spacing: 1px;          /* 字母间距 */  
+  }  
+    
+  .top-header-right-info ul li a:hover{  
+      text-decoration:none;         /* 去除下划线 */  
+      color:#2DCB74;                /* 鼠标悬停时文字颜色变为绿色 */  
+  }  
+    
+  .social-icons{  
+      float:left;                   /* 左浮动 */  
+  }  
+    
+  .social-icons ul{  
+      padding:0;                    /* 内边距为0 */  
+      margin:0;                     /* 外边距为0 */  
+  }  
+  .bottom-header { /*  导航栏底部背景*/
+      background: #FFF;
+  }
+  .social-icons ul li{  
+      display:inline-block;         /* 行内块级元素显示 */  
+  }  
+    
+  .social-icons ul li a.twitter{  
+      color: #FFF;                  /* 文字颜色为白色 */  
+      font-size: 1em;               /* 字体大小为默认大小 */  
+      margin: 0 .5em;               /* 外边距设置 */  
+  }  
+    
+  /* 设置顶部导航栏的背景颜色为白色 */  
+  .top-nav{  
+      background:#FFF;  
+  }  
+    
+  /* 移除navbar-default的边框、背景、边距、最小高度和内边距 */  
+  .navbar-default {  
+      border: none !important; /* 移除边框 */  
+      background: none !important; /* 移除背景 */  
+      margin: 0 !important; /* 移除边距 */  
+      min-height: 0 !important; /* 移除最小高度 */  
+      padding: 0 !important; /* 移除内边距 */  
+  }  
+    
+  /* 移除激活状态的导航链接的背景颜色 */  
+  .navbar-default .navbar-nav > .active > a,   
+  .navbar-default .navbar-nav > .active > a:hover,   
+  .navbar-default .navbar-nav > .active > a:focus {  
+      background: none !important;  
+  }  
+    
+  /* 移除导航栏折叠部分的内边距 */  
+  div#bs-example-navbar-collapse-1 {  
+      padding: 0;  
+  }  
+    
+  /* 设置顶部导航栏中ul的内边距、边距和浮动方式 */  
+  .top-nav ul{  
+      padding: 0; /* 移除内边距 */  
+      margin: 0 0 0 11em; /* 设置边距 */  
+      float: none; /* 移除浮动 */  
+  }  
+    
+  /* 设置顶部导航栏中li的显示方式和浮动方式 */  
+  .top-nav ul li{  
+      display: inline-block; /* 设置为内联块级元素 */  
+      margin: 0; /* 移除边距 */  
+      float: left; /* 设置为左浮动 */  
+  }  
+    
+  /* 设置打开状态的导航链接的背景颜色、右边框和阴影 */  
+  .navbar-default .navbar-nav > .open > a,   
+  .navbar-default .navbar-nav > .open > a:hover,   
+  .navbar-default .navbar-nav > .open > a:focus {  
+      background: none !important; /* 移除背景 */  
+      border-right: solid 1px #EFEFEF; /* 设置右边框 */  
+      box-shadow: 1px 0px 0px 0px rgba(72, 72, 72, 0); /* 设置阴影 */  
+  }  
+    
+  /* 设置顶部导航栏中链接的字体颜色、大小、字体族、边距、内边距、右边框和阴影 */  
+  .top-nav ul li a{  
+      color: #353535 !important; /* 设置字体颜色 */  
+      font-size: 1em; /* 设置字体大小 */  
+      font-family: 'Francois One', sans-serif; /* 设置字体族 */  
+      margin: 0; /* 移除边距 */  
+      text-decoration: none; /* 移除文本装饰 */  
+      padding: 2.1em; /* 设置内边距 */  
+      border-right: solid 1px #EFEFEF; /* 设置右边框 */  
+      box-shadow: 1px 0px 0px 0px rgba(72, 72, 72, 0); /* 设置阴影 */  
+  }  
+    
+  /* 设置顶部导航栏中链接的悬停状态的字体颜色 */  
+  .top-nav ul li a:hover{  
+      color: #2DCB74 !important; /* 设置悬停状态的字体颜色 */  
+  }  
+    
+  /* 设置顶部导航栏中激活状态的链接的字体颜色 */  
+  .top-nav ul li a.active{  
+      color: #2DCB74 !important; /* 设置激活状态的字体颜色 */  
+  }  
+    
+  /* 设置下拉箭头（caret）的左边距 */  
+  .caret {  
+      margin-left: 14px;  
+  }  
+    
+  /* 设置下拉菜单的背景颜色、阴影、边框、边距、顶部位置、左边距和最小宽度 */  
+  ul.dropdown-menu {  
+      background: #FFF; /* 设置背景颜色 */  
+      box-shadow: 0 0 0; /* 移除阴影 */  
+      border: none; /* 移除边框 */  
+      margin: 0; /* 移除边距 */  
+      top: 6em; /* 设置顶部位置 */  
+      left: 0; /* 设置左边距 */  
+      min-width: 107px; /* 设置最小宽度 */  
+  }  
+    
+  /* 设置下拉菜单中链接的显示方式、内边距、外边距、字体权重、行高、字体颜色和边框 */  
+  .dropdown-menu > li > a {  
+      display: block; /* 设置为块级元素 */  
+      padding: 3px 44px !important; /* 设置内边距 */  
+      clear: both; /* 清除浮动 */  
+      margin: .5em 0 !important; /* 设置外边距 */  
+      font-weight: normal; /* 设置字体权重 */  
+      line-height: 1.42857143; /* 设置行高 */  
+      color: #FFF !important; /* 设置字体颜色（这里可能是个错误，通常下拉菜单的字体颜色不是白色） */  
+      border: none !important; /* 移除边框 */  
+  }  
+    
+  /* 移除下拉菜单中链接的悬停和聚焦状态的背景颜色 */  
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {  
+      background: none;  
+  }  
+    
+  /* 设置子菜单的位置和样式 */  
+  .dropdown-submenu {  
+      position: relative; /* 设置为相对定位 */  
+  }  
+    
+  .dropdown-submenu>.dropdown-menu {  
+      top: 0; /* 设置顶部位置 */  
+      left: 103%; /* 设置左边距 */  
+      margin-top: -6px; /* 设置顶部外边距 */  
+      margin-left: -1px; /* 设置左边距 */  
+      -webkit-border-radius: 0 6px 6px 6px; /* 设置圆角 */  
+      -moz-border-radius: 0 6px 6px; /* 设置圆角 */  
+      border-radius: 0 6px 6px 6px; /* 设置圆角 */  
+  }  
+    
+  /* 显示子菜单 */  
+  .dropdown-submenu:hover>.dropdown-menu {  
+      display: block; /* 设置为块级显示 */  
+  }  
+    
+  /* 设置子菜单链接后的箭头样式 */  
+  .dropdown-submenu>a:after {  
+      display: block; /* 设置为块级元素 */  
+      content: " "; /* 设置内容为空 */  
+      float: right; /* 设置为右浮动 */  
+      width: 0; /* 设置宽度为0 */  
+      height: 0; /* 设置高度为0 */  
+      border-color: transparent; /* 设置边框颜色为透明 */  
+      border-width: 5px 0 5px 5px; /* 设置边框宽度 */  
+      margin-top: 5px; /* 设置顶部外边距 */  
+      margin-right: -10px; /* 设置右边距 */  
+  }  
+    
+  /* 设置子菜单悬停状态时箭头的颜色 */  
+  .dropdown-submenu:hover>a:after {  
+      border-left-color: #fff; /* 设置左边框颜色为白色 */  
+  }  
+    
+  /* 设置左浮动子菜单的样式 */  
+  .dropdown-submenu.pull-left {  
+      float: none; /* 移除浮动 */  
+  }  
+    
+  .dropdown-submenu.pull-left>.dropdown-menu {  
+      left: -100%; /* 设置左边距 */  
+      margin-left: 10px; /* 设置左边距 */  
+      -webkit-border-radius: 6px 0 6px 6px; /* 设置圆角 */  
+      -moz-border-radius: 6px 0 6px 6px; /* 设置圆角 */  
+      border-radius: 6px 0 6px 6px; /* 设置圆角 */  
+  }  
+    
+  /* 设置logo的样式 */  
+  .logo h1 {  
+      margin: 0; /* 移除边距 */  
+  }  
+    
+  .logo{  
+      position: absolute; /* 设置为绝对定位 */  
+      top: 0; /* 设置顶部位置 */  
+      width: 170px; /* 设置宽度 */  
+      z-index: 999; /* 设置层叠顺序 */  
+  }  
+    
+  .logo h1 a {  
+      display:block; /* 设置为块级元素 */  
+  }  
+    
+  .logo h1 a img{  
+      width:100%; /* 设置图片宽度为父元素宽度的100% */  
+  }  
+    
+  /*-- banner --*/  
+  /* 设置banner的背景图片、背景尺寸和内边距 */  
+  .banner{  
+      background: url(../images/city.svg) no-repeat 0px 0px; /* 设置背景图片 */  
+      background-size: cover; /* 设置背景图片覆盖整个容器 */  
+      padding: 10em 0 13em; /* 设置内边距 */  
+  }  
+    
+  /* 设置slider的定位方式 */  
+  .slider {  
+      position: relative; /* 设置为相对定位 */  
+  }
+  /* 设置slider中的h2标签的样式 */  
+  .slider h2{  
+      color:#FFF; /* 字体颜色为白色 */  
+      font-size:2em; /* 字体大小为2em */  
+      font-family: 'Francois One', sans-serif; /* 字体族为'Francois One'，若不存在则使用无衬线字体 */  
+      margin:0; /* 外边距为0 */  
+      text-align:center; /* 文本居中 */  
+  }  
+    
+  /* 设置一个边框的样式 */  
+  .border{  
+      height: 2px; /* 高度为2px */  
+      background: #FFF; /* 背景颜色为白色 */  
+      width: 4%; /* 宽度为容器宽度的4% */  
+      margin: 22px auto 0; /* 上边距为22px，左右自动居中，下边距为0 */  
+  }  
+    
+  /* 设置slider-info的样式 */  
+  .slider-info {  
+      text-align: center; /* 文本居中 */  
+      margin: 6em 0 0 0; /* 上边距为6em，其他边距为0 */  
+  }  
+    
+  /* 设置slider-info中的h3标签的样式 */  
+  .slider-info h3{  
+      font-size: 4em; /* 字体大小为4em */  
+      margin: 0; /* 外边距为0 */  
+      font-family: 'Francois One', sans-serif; /* 字体族设置 */  
+      color: #FFF; /* 字体颜色为白色 */  
+  }  
+    
+  /* 设置slider-info中的p标签的样式 */  
+  .slider-info p{  
+      color: #E8E8E8; /* 字体颜色为浅灰色 */  
+      font-size: 1em; /* 字体大小为1em */  
+      margin: 1em 0 0 0; /* 上边距为1em，其他边距为0 */  
+  }  
+    
+  /* 设置more-button中的a标签的样式 */  
+  .more-button a{  
+      border: solid 2px #FFF; /* 白色实线边框，宽度为2px */  
+      color: #FFF; /* 字体颜色为白色 */  
+      font-size: 1em; /* 字体大小为1em */  
+      padding: .5em 3em; /* 内边距为上下0.5em，左右3em */  
+      text-decoration: none; /* 无文本装饰，即无下划线 */  
+      letter-spacing: 1px; /* 字符间距为1px */  
+  }  
+    
+  /* 设置more-button的样式 */  
+  .more-button {  
+      margin: 7em 0 1em 0; /* 上边距为7em，下边距为1em，左右边距为0 */  
+  }	  
+    
+  /* 设置more-button中a标签的hover状态样式 */  
+  .more-button a:hover{  
+      background: #2DCB74; /* 背景颜色为绿色 */  
+      border: solid 2px #FFF; /* 白色实线边框 */  
+  }  
+    
+  /* 设置slider2和slider3的样式 */  
+  #slider2,  
+  #slider3 {  
+    box-shadow: none; /* 无盒阴影 */  
+    -moz-box-shadow: none; /* Firefox浏览器的无盒阴影 */  
+    -webkit-box-shadow: none; /* WebKit浏览器的无盒阴影 */  
+    margin: 0 auto; /* 上下边距为0，左右自动居中 */  
+  }  
+    
+  /* 设置rslides_tabs的样式 */  
+  .rslides_tabs {  
+    list-style: none; /* 无列表样式 */  
+    padding: 0; /* 内边距为0 */  
+    background: rgba(0,0,0,.25); /* 背景颜色为半透明的黑色 */  
+    /* 添加盒子阴影 */  
+    box-shadow: 0 0 1px rgba(255,255,255,.3), inset 0 0 5px rgba(0,0,0,1.0);  
+    -moz-box-shadow: ...; /* Firefox浏览器 */  
+    -webkit-box-shadow: ...; /* WebKit浏览器 */  
+    font-size: 18px; /* 字体大小为18px */  
+    margin: 0 auto 50px; /* 上下边距为0，左右自动居中，下边距为50px */  
+    max-width: 540px; /* 最大宽度为540px */  
+    padding: 10px 0; /* 内边距为上下10px，左右为0 */  
+    text-align: center; /* 文本居中 */  
+    width: 100%; /* 宽度为100% */  
+  }  
+    
+  /* 设置rslides_tabs中的li标签的样式 */  
+  .rslides_tabs li {  
+    display: inline; /* 设置为内联元素 */  
+    float: none; /* 不浮动 */  
+    margin-right: 1px; /* 右边距为1px */  
+  }  
+    
+  /* 设置rslides_tabs中的a标签的样式 */  
+  .rslides_tabs a {  
+    width: auto; /* 宽度自动 */  
+    line-height: 20px; /* 行高为20px */  
+    padding: 9px 20px; /* 内边距为上下9px，左右20px */  
+    height: auto; /* 高度自动 */  
+    background: transparent; /* 背景颜色为透明 */  
+    display: inline; /* 设置为内联元素 */  
+  }  
+    
+  /* 设置rslides_tabs中第一个li标签的样式 */  
+  .rslides_tabs li:first-child {  
+    margin-left: 0; /* 左边距为0 */  
+  }  
+    
+  /* 设置当前活动的rslides_tab的a标签的样式 */  
+  .rslides_tabs .rslides_here a {  
+    background: rgba(255,255,255,.1); /* 背景颜色为半透明的白色 */  
+    color: #fff; /* 字体颜色为白色 */  
+    font-weight: bold; /* 字体加粗 */  
+  }  
+    
+  /* 设置events列表的样式 */  
+  .events {  
+    list-style: none; /* 无列表样式 */  
+  }  
+    
+  /* 设置callbacks_container的样式 */  
+  .callbacks_container {  
+    position: relative; /* 相对定位 */  
+    width: 100%; /* 宽度为100% */  
+  }  
+    
+  /* 设置callbacks的样式 */  
+  .callbacks {  
+    position: relative; /* 相对定位 */  
+    list-style: none; /* 无列表样式 */  
+    overflow: hidden; /* 溢出隐藏 */  
+    width: 100%; /* 宽度为100% */  
+    padding: 0; /* 内边距为0 */  
+    margin: 0; /* 外边距为0 */  
+  }  
+    
+  /* 设置callbacks中的li标签的样式 */  
+  .callbacks li {  
+    position: absolute; /* 绝对定位 */  
+    width: 100%; /* 宽度为100% */  
+    left: 0; /* 左边缘为0 */  
+    top: 0; /* 上边缘为0 */  
+  }  
+    
+  /* 设置callbacks中的img标签的样式 */  
+  .callbacks img {  
+    position: relative; /* 相对定位 */  
+    z-index: 1; /* z轴位置为1 */  
+    height: auto; /* 高度自动 */  
+    border: 0; /* 边框为0 */  
+  }  
+    
+  /* 设置callbacks中的caption的样式 */  
+  .callbacks .caption {  
+      display: block; /* 设置为块级元素 */  
+      position: absolute; /* 绝对定位 */  
+      z-index: 2; /* z轴位置为2 */  
+      font-size: 20px; /* 字体大小为20px */  
+      text-shadow: none; /* 无文本阴影 */  
+      color: #fff; /* 字体颜色为白色 */  
+      left: 0; /* 左边缘为0 */  
+      right: 0; /* 右边缘为0 */  
+      padding: 10px 20px; /* 内边距为上下10px，左右20px */  
+      margin: 0; /* 外边距为0 */  
+      max-width: none; /* 无最大宽度限制 */  
+      top: 10%; /* 上边缘为容器高度的10% */  
+      text-align: center; /* 文本居中 */  
+  }  
+    
+  
+    /* 导航按钮的基本样式 */  
+  .callbacks_nav {  
+      position: absolute; /* 绝对定位 */  
+      -webkit-tap-highlight-color: rgba(0,0,0,0); /* 移除点击高亮颜色 */  
+      top: 50%; /* 顶部偏移50% */  
+      opacity: 0.7; /* 透明度 */  
+      z-index: 3; /* 堆叠顺序 */  
+      text-indent: -9999px; /* 文本缩进，隐藏文本 */  
+      overflow: hidden; /* 溢出隐藏 */  
+      text-decoration: none; /* 无文本装饰 */  
+      height: 2px; /* 高度 */  
+      width: 45px; /* 宽度 */  
+      margin-top: 0; /* 顶部外边距 */  
+      background: #FFF; /* 背景颜色 */  
+  }  
+    
+  /* 导航按钮被点击时的样式 */  
+  .callbacks_nav:active {  
+    opacity: 1.0; /* 透明度变为1 */  
+  }  
+    
+  /* 下一个导航按钮的样式 */  
+  .callbacks_nav.next {  
+      right:0; /* 右侧对齐 */  
+      background-position: right top; /* 背景图片位置 */  
+  }  
+    
+  /* 滑块分页器链接的样式 */  
+  #slider3-pager a {  
+    display: inline-block; /* 内联块级显示 */  
+  }  
+    
+  /* 滑块分页器span的样式 */  
+  #slider3-pager span{  
+    float: left; /* 左浮动 */  
+    width:100px; /* 宽度 */  
+    height:15px; /* 高度 */  
+    background:#fff; /* 背景颜色 */  
+    display:inline-block; /* 内联块级显示 */  
+    border-radius:30em; /* 圆角 */  
+    opacity:0.6; /* 透明度 */  
+  }  
+    
+  /* 当前滑块分页器链接的样式 */  
+  #slider3-pager .rslides_here a {  
+    background: #FFF; /* 背景颜色 */  
+    border-radius:30em; /* 圆角 */  
+    opacity:1; /* 透明度 */  
+  }  
+    
+  /* 滑块分页器链接的内边距 */  
+  #slider3-pager a {  
+    padding: 0; /* 内边距 */  
+  }  
+    
+  /* 滑块分页器列表项的样式 */  
+  #slider3-pager li{  
+      display:inline-block; /* 内联块级显示 */  
+  }  
+    
+  /* 滑块容器的样式 */  
+  .rslides {  
+    position: relative; /* 相对定位 */  
+    list-style: none; /* 无列表样式 */  
+    overflow: hidden; /* 溢出隐藏 */  
+    width: 100%; /* 宽度 */  
+    padding: 0; /* 内边距 */  
+    margin: 0; /* 外边距 */  
+  }  
+    
+  /* 滑块列表项的样式 */  
+  .rslides li {  
+    -webkit-backface-visibility: hidden; /* 隐藏背面，提高动画性能 */  
+    position: absolute; /* 绝对定位 */  
+    display: none; /* 默认不显示 */  
+    width: 100%; /* 宽度 */  
+    left: 0; /* 左侧对齐 */  
+    top: 0; /* 顶部对齐 */  
+  }  
+    
+  /* 滑块列表项的另一种样式，用于覆盖前面的绝对定位样式 */  
+  .rslides li{  
+    position: relative; /* 相对定位 */  
+    display: block; /* 块级显示 */  
+    float: left; /* 左浮动 */  
+  }  
+    
+  /* 滑块图片的样式 */  
+  .rslides img {  
+    height: auto; /* 高度自适应 */  
+    border: 0; /* 无边框 */  
+    width:100%; /* 宽度 */  
+  }  
+    
+  /* 滑块标签的样式 */  
+  .callbacks_tabs{  
+      list-style: none; /* 无列表样式 */  
+      position: absolute; /* 绝对定位 */  
+      top: 120%; /* 顶部偏移 */  
+      z-index: 999; /* 堆叠顺序 */  
+      right: 48%; /* 右侧偏移 */  
+      padding: 0; /* 内边距 */  
+      margin: 0; /* 外边距 */  
+  }  
+    
+  /* 滑块顶部内容的样式 */  
+  .slider-top{  
+      text-align: center; /* 文本居中 */  
+      padding:10em 0; /* 内边距 */  
+  }  
+    
+  /* 滑块顶部标题的样式 */  
+  .slider-top h1{  
+      font-weight:700; /* 字体加粗 */  
+      font-size:48px; /* 字体大小 */  
+      color:#010101; /* 颜色 */  
+  }  
+    
+  /* 滑块顶部段落的样式 */  
+  .slider-top p{  
+      font-weight:400; /* 字体正常 */  
+      font-size:20px; /* 字体大小 */  
+      padding:1em 7em; /* 内边距 */  
+      color:#010101; /* 颜色 */  
+  }  
+    
+  /* 滑块顶部社交图标的样式 */  
+  .slider-top ul.social-slide{  
+      display:inline-flex; /* 内联弹性盒子 */  
+      margin: 0px; /* 外边距 */  
+      padding: 0px; /* 内边距 */  
+  }  
+    
+  /* 社交图标列表项的样式 */  
+  ul.social-slide li i{  
+      width:70px; /* 宽度 */  
+      height:74px; /* 高度 */  
+      background:url(../images/img-resources.png)no-repeat; /* 背景图片 */  
+      display: inline-block; /* 内联块级显示 */  
+      margin:0px 15px; /* 外边距 */  
+  }
+  
+  
+  /* 设置ul.social-slide列表项中类名为win的i元素的背景位置 */  
+  ul.social-slide li i.win{  
+      background-position:-6px 0px; /* 背景位置：左移6px，垂直位置不变 */  
+  }  
+    
+  /* 设置ul.social-slide列表项中类名为android的i元素的背景位置 */  
+  ul.social-slide li i.android{  
+      background-position:-110px 0px; /* 背景位置：左移110px，垂直位置不变 */  
+  }  
+    
+  /* 设置ul.social-slide列表项中类名为mac的i元素的背景位置 */  
+  ul.social-slide li i.mac{  
+      background-position:-215px 0px; /* 背景位置：左移215px，垂直位置不变 */  
+  }  
+    
+  /* 设置callbacks_tabs列表项的显示方式和外边距 */  
+  .callbacks_tabs li{  
+    display: inline-block; /* 设置为内联块元素 */  
+    margin: 0 .2em; /* 设置左右外边距为0.2em */  
+  }  
+    
+  /* 响应式设计：当屏幕宽度小于或等于600px时，调整callbacks_nav的位置 */  
+  @media screen and (max-width: 600px) {  
+    .callbacks_nav {  
+      top: 47%; /* 将callbacks_nav的位置调整为顶部47% */  
+      }  
+  }  
+    
+  /*----*/  
+    
+  /* 隐藏callbacks_tabs中的链接 */  
+  .callbacks_tabs a{  
+   visibility: hidden; /* 隐藏链接 */  
+  }  
+    
+
+  /* 设置callbacks_tabs中链接的伪元素：after的样式 */  
+  .callbacks_tabs a:after {  
+      content: "\f111"; /* 设置内容，这里可能是一个图标字符 */  
+      font-size: 0; /* 设置字体大小为0 */  
+      visibility: visible; /* 设置伪元素可见 */  
+      display: block; /* 设置为块级元素 */  
+      height: 6px; /* 设置高度 */  
+      width: 6px; /* 设置宽度 */  
+      background: #C1C1C1; /* 设置背景颜色 */  
+      display: inline-block; /* 设置为内联块元素 */  
+      /* 设置不同浏览器的圆角边框 */  
+      border-radius: 30px;  
+      -webkit-border-radius: 30px;  
+      -moz-border-radius: 30px;  
+      -o-border-radius: 30px;  
+      -ms-border-radius: 30px;  
+  }  
+    
+  /* 设置当前激活的callbacks_tabs链接的伪元素：after的样式 */  
+  .callbacks_here a:after{  
+      border: 2px solid #FFFFFF; /* 设置白色边框 */  
+      background: #FFFFFF; /* 设置白色背景 */  
+      height: 12px; /* 设置高度 */  
+      width: 12px; /* 设置宽度 */  
+  }	  
+    
+  /* 设置callbacks2_tabs的定位和列表项的外边距 */  
+  ul.callbacks_tabs.callbacks2_tabs {  
+      top: 73%; /* 顶部位置为73% */  
+      left: 46%; /* 左侧位置为46% */  
+  }  
+    
+  ul.callbacks_tabs.callbacks2_tabs li {  
+      display: inline-block; /* 设置为内联块元素 */  
+      margin: 0 .5em; /* 设置左右外边距为0.5em */  
+  }  
+    
+  /* 设置callbacks2_tabs链接的伪元素：after的背景颜色 */  
+  ul.callbacks_tabs.callbacks2_tabs a:after {  
+      background: #F1C99B !important; /* 设置背景颜色为#F1C99B，!important用于提高优先级 */  
+  }  
+    
+  /* 移除callbacks2_tabs链接的伪元素：after的边框 */  
+  ul.callbacks_tabs.callbacks2_tabs a:after {  
+      border: none; /* 移除边框 */  
+  }  
+    
+  /*-- banner-bottom --*/  
+    
+  /* 设置banner-bottom的定位 */  
+  .banner-bottom{  
+      position: absolute; /* 绝对定位 */  
+      top: 53em; /* 顶部位置为53em */  
+      left: 13%; /* 左侧位置为13% */	  
+  }  
+    
+  /* 设置banner-bottom-left的背景和内边距 */  
+  .banner-bottom-left{  
+      background: url(../images/5.png) no-repeat 242px 0px #2DCB74; /* 设置背景图片、不重复、定位及背景颜色 */  
+      background-size: 64%; /* 设置背景图片大小 */  
+      padding: 2.5em; /* 设置内边距 */  
+  }  
+    
+  /* 设置banner-bottom-right的背景图片、大小和重要性 */  
+  .banner-bottom-right{  
+      background: url(../images/4.png) no-repeat 342px 0px #D2D4D4 !important; /* 设置背景图片、不重复、定位、背景颜色及重要性 */  
+      background-size: 37% !important; /* 设置背景图片大小及重要性 */  
+  }  
+    
+  /* 设置left-border的边框和高度 */  
+  .left-border{  
+      border: solid 5px #FFF; /* 设置白色实线边框，宽度为5px */  
+      height: 200px; /* 设置高度 */  
+  }  
+    
+  /* 设置left-border-info的定位和宽度 */  
+  .left-border-info {  
+      position: absolute; /* 绝对定位 */  
+      top: 10%; /* 顶部位置为10% */  
+      left: 7%; /* 左侧位置为7% */  
+      width: 38%; /* 设置宽度 */  
+  }
+  
+  /* 设置left-border-info中p标签的样式 */  
+  .left-border-info p{  
+      color: #FFF; /* 设置文字颜色为白色 */  
+      font-size: 2em; /* 设置字体大小为2em */  
+      margin: 0; /* 设置外边距为0 */  
+      font-family: 'Francois One', sans-serif; /* 设置字体族 */  
+      background: #2DCB74; /* 设置背景颜色 */  
+  }  
+    
+  /* 设置right-border-info中p标签的背景颜色 */  
+  .right-border-info p{  
+      background: #D2D4D4; /* 设置背景颜色为浅灰色 */  
+  }  
+    
+  /*-- information --*/  
+  /* 设置information区域的样式 */  
+  .information{  
+      padding: 18em 0 4em 0; /* 设置上下内边距 */	  
+  }  
+    
+  /* 设置information-heading的样式 */  
+  .information-heading{  
+      text-align:center; /* 设置文本居中对齐 */  
+  }  
+    
+  /* 设置information-heading和popular-heading中h3和p标签的样式 */  
+  .information-heading h3,.popular-heading h3{  
+      color: #202020; /* 设置文字颜色为深灰色 */  
+      font-size: 3em; /* 设置字体大小为3em */  
+      font-family: 'Francois One', sans-serif; /* 设置字体族 */  
+      margin: 0; /* 设置外边距为0 */  
+  }  
+    
+  /* 设置information-heading, popular-heading等中p标签的样式 */  
+  .information-heading p,.popular-heading p,.about-heading p,.codes-heading  p,.gallery-heading p,.blog-heading p,.contact-heading p{  
+      font-size: 1em; /* 设置字体大小 */  
+      margin: 2em auto 0; /* 设置外边距，上下自动，左边距为0 */  
+      width: 80%; /* 设置宽度为父元素的80% */  
+  }  
+    
+  /* 设置information-grids的样式 */  
+  .information-grids {  
+      margin: 5em 0 0 0; /* 设置上边距 */  
+  }  
+    
+  /* 设置information-grid-img中img标签的样式 */  
+  .information-grid-img img{  
+      width:100%; /* 设置宽度为父元素的100% */  
+  }  
+    
+  /* 设置information-grid-info的样式 */  
+  .information-grid-info {  
+      padding: 2em; /* 设置内边距 */  
+      background: #FFF; /* 设置背景颜色为白色 */  
+  }  
+    
+  /* 设置information-grid-info和team-grid中h4标签的样式 */  
+  .information-grid-info h4,.team-grid h4{  
+      color: #2DCB74; /* 设置文字颜色 */  
+      font-size: 2em; /* 设置字体大小 */  
+      font-family: 'Francois One', sans-serif; /* 设置字体族 */  
+      margin: 0; /* 设置外边距为0 */  
+      text-transform: capitalize; /* 设置文字首字母大写 */  
+  }  
+    
+  /* 设置information-grid-info和team-grid中p标签的样式 */  
+  .information-grid-info p,.team-grid p{  
+      font-size: .875em; /* 设置字体大小 */  
+      color: #ccc; /* 设置文字颜色为浅灰色 */  
+      margin: 1em 0 0 0; /* 设置外边距 */  
+      line-height: 1.8em; /* 设置行高 */  
+  }  
+    
+  /* 设置information-info的样式 */  
+  .information-info{  
+      box-shadow: 0 -1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24); /* 设置盒子阴影 */  
+  }  
+    
+  /*-- popular --*/  
+  /* 设置popular区域的样式 */  
+  .popular{  
+      padding: 4em 0; /* 设置上下内边距 */  
+      background: #DBAC76; /* 设置背景颜色 */  
+      position:relative; /* 设置相对定位 */  
+  }  
+    
+  /* 设置popular-heading中h3标签的样式 */  
+  .popular-heading h3{  
+      color:#FFF; /* 设置文字颜色为白色 */  
+  }  
+    
+  /* 设置popular-heading中p标签的样式 */  
+  .popular-heading p{  
+      color:#FFF; /* 设置文字颜色为白色 */	  
+  }  
+    
+  /* 设置popular-slide的样式 */  
+  .popular-slide {  
+      margin: 4em 0 0 0; /* 设置上边距 */  
+  }  
+    
+  /* 设置popular-slide-info的样式 */  
+  .popular-slide-info{  
+      background: url(../images/9.jpg) no-repeat 0px -135px; /* 设置背景图片、不重复及定位 */  
+      background-size: cover; /* 设置背景图片覆盖整个容器 */  
+      min-height: 400px; /* 设置最小高度 */  
+      text-align: center; /* 设置文本居中对齐 */	  
+  }  
+    
+  /* 设置popular-slide-info中h4标签的样式 */  
+  .popular-slide-info h4{  
+      color: #FFF; /* 设置文字颜色为白色 */  
+      font-size: 6em; /* 设置字体大小 */  
+      font-family: 'Francois One', sans-serif; /* 设置字体族 */  
+      padding: 1em 0 0 0; /* 设置内边距 */  
+      text-transform: uppercase; /* 设置文字全大写 */  
+  }  
+    
+  /* 设置popular-slide-info中p标签的样式 */  
+  .popular-slide-info p{  
+      font-size: .875em; /* 设置字体大小 */  
+      color: #FFF; /* 设置文字颜色为白色 */  
+      margin: 1em auto 0; /* 设置外边距，上下自动，左边距为0 */  
+      line-height: 1.8em; /* 设置行高 */  
+      width: 50%; /* 设置宽度为父元素的50% */  
+  }  
+    
+  /* 设置不同popular-slide的背景图片及定位 */  
+  .popular-slide1{  
+      background: url(../images/10.jpg) no-repeat 0px -388px; /* 设置背景图片、不重复及定位 */  
+  }  
+  .popular-slide2{  
+      background: url(../images/11.jpg) no-repeat 0px -537px; /* 设置背景图片、不重复及定位 */  
+  }  
+    
+  /* 设置popular-grids的样式 */  
+  .popular-grids{  
+      margin: 5em 0 0 0; /* 设置上边距 */  
+  }  
+    
+  /* 设置popular-grid中h5标签的样式 */  
+  .popular-grid h5{  
+      color: #FFF; /* 设置文字颜色为白色 */  
+      font-size: 1.5em; /* 设置字体大小 */  
+      font-family: 'Francois One', sans-serif; /* 设置字体族 */  
+      margin: 0; /* 设置外边距为0 */  
+  }  
+    
+  /* 设置popular-grid中p标签的样式 */  
+  .popular-grid p{  
+      font-size: .875em; /* 设置字体大小 */  
+      color: #FDD6AA; /* 设置文字颜色为浅黄色 */  
+      line-height: 1.8em; /* 设置行高 */  
+      margin: 2em 0 0 0; /* 设置外边距 */  
+  }
+  
+  /*-- 底部 --*/
+  @media screen and (max-width: 600px) {
+    .callbacks_nav {
+      top: 47%;
+      }
+  }
+  .footer{
+      /* 设置底部区域的内边距为上下各 4em，左右为 0 */
+      padding:4em 0;
+  }
+  .footer-nav h4{
+      /* 设置标题颜色为 #2DCB74（一种鲜艳的绿色），并强制覆盖其他可能的样式 */
+      color: #2DCB74!important;
+      /* 设置字体大小为 2em */
+      font-size: 2em;
+      /* 外边距设置为上下左右都是 0，其中底部外边距为 1em */
+      margin: 0 0 1em 0;
+      /* 设置字体为 'Francois One'，如果该字体不可用则使用 sans-serif 字体族 */
+      font-family: 'Francois One', sans-serif;
+  }
+  .footer-nav ul{
+      /* 清除无序列表的默认内边距 */
+      padding:0;
+      /* 清除无序列表的默认外边距 */
+      margin:0;
+  }
+  .footer-nav ul li{
+      /* 将列表项设置为块级元素 */
+      display:block;
+      /* 设置列表项的外边距为上下各 1em，左右为 0 */
+      margin:1em 0;
+  }
+  .footer-nav ul li a{
+      /* 设置链接文字颜色为 #353535（一种深灰色） */
+      color: #353535;
+      /* 设置字体大小为 1em */
+      font-size: 1em;
+      /* 设置字体为 'Francois One'，如果该字体不可用则使用 sans-serif 字体族 */
+      font-family: 'Francois One', sans-serif;
+  }
+  .footer-nav ul li a:hover{
+      /* 当鼠标悬停在链接上时，将链接文字颜色设置为 #2DCB74（鲜艳的绿色） */
+      color:#2DCB74;
+      /* 去除链接的下划线 */
+      text-decoration:none;
+  }
+  .footer-nav p{
+      /* 设置段落的字体大小为.875em */
+      font-size:.875em;
+      /* 设置段落文字颜色为 #353535（深灰色） */
+      color: #353535;
+      /* 清除段落的默认外边距 */
+      margin: 0;
+      /* 设置段落的行高为 1.8em */
+      line-height: 1.8em;
+  }
+  .footer-nav form{
+      /* 设置表单的外边距为上下各 1em，左右为 0，且顶部外边距为 0 时从新的一行开始 */
+      margin:1em 0 0 0;
+  }
+
+  .footer-nav form input[type="email"]:focus{
+      /* 当输入框获得焦点时，去除轮廓线 */
+      outline: none;
+  }
+  .footer-nav form input[type="email"] {
+      /* 设置输入框的背景颜色为白色 */
+      background: #fff;
+      /* 去除输入框的阴影效果，并强制覆盖其他可能的样式 */
+      box-shadow: none!important;
+      /* 设置输入框的内边距为上下各 10px，左右各 23px */
+      padding: 10px 23px;
+      /* 设置输入框内文字颜色为 #282828（深灰色） */
+      color: #282828;
+      /* 设置输入框的字体大小为.875em */
+      font-size:.875em;
+      /* 设置输入框的宽度为 100%，并强制覆盖其他可能的样式 */
+      width: 100%!important;
+      /* 设置输入框的字体粗细为 400 */
+      font-weight: 400;
+      /* 设置输入框的边框为 1px 宽的实线，颜色为 #ebebeb（浅灰色） */
+      border: 1px solid #ebebeb;
+      /* 设置输入框的底部外边距为 1em */
+      margin: 0 0 1em 0;
+  }
+  .footer-nav form input[type="submit"] {
+      /* 设置提交按钮的边框为 2px 宽的实线，颜色为 #353535（深灰色） */
+      border: solid 2px #353535;
+      /* 设置提交按钮内文字颜色为 #353535（深灰色） */
+      color: #353535;
+      /* 设置提交按钮的字体大小为.875em */
+      font-size:.875em;
+      /* 设置提交按钮的内边距为上下各.5em，左右各 2em */
+      padding:.5em 2em;
+      /* 设置提交按钮无文本装饰，即去除下划线 */
+      text-decoration: none;
+      /* 设置提交按钮内文字的字母间距为 1px */
+      letter-spacing: 1px;
+      /* 设置提交按钮无背景颜色 */
+      background: none;
+  }
+  .footer-nav form input[type="submit"]:hover {
+      /* 当鼠标悬停在提交按钮上时，将按钮内文字颜色设置为 #2DCB74（鲜艳的绿色） */
+      color:#2DCB74;
+      /* 当鼠标悬停在提交按钮上时，将按钮边框颜色设置为 #2DCB74（鲜艳的绿色） */
+      border: solid 2px #2DCB74;
+      /* 设置过渡效果持续时间为 0.5s，对所有属性生效 */
+      transition: 0.5s all;
+      /* 针对 Webkit 内核浏览器设置过渡效果 */
+      -webkit-transition: 0.5s all;
+      /* 针对 Opera 浏览器设置过渡效果 */
+      -o-transition: 0.5s all;
+      /* 针对 Firefox 浏览器设置过渡效果 */
+      -moz-transition: 0.5s all;
+      /* 针对 IE 浏览器设置过渡效果 */
+      -ms-transition: 0.5s all;
+  }
+  .news-grid h6{
+      /* 设置标题颜色为 #DBAC76（一种暖色调的颜色） */
+      color: #DBAC76;
+      /* 设置字体大小为.875em */
+      font-size:.875em;
+      /* 设置底部外边距为 1.5em */
+      margin:0 0 1.5em 0;
+  }
+  .news-grid h6 a{
+      /* 设置链接文字颜色为 #353535（深灰色） */
+      color: #353535;
+  }
+  .news-grid h6 a:hover{
+      /* 当鼠标悬停在链接上时，将链接文字颜色设置为 #2DCB74（鲜艳的绿色） */
+      color:#2DCB74;
+      /* 去除链接的下划线 */
+      text-decoration:none;
+  }
+  .copyright {
+      /* 设置版权信息区域的顶部外边距为 1em */
+      margin: 1em 0 0 0;
+  }
+  .copyright p{
+      /* 设置段落的字体大小为.875em */
+      font-size:.875em;
+      /* 设置段落文字颜色为 #353535（深灰色） */
+      color: #353535;
+      /* 清除段落的默认外边距 */
+      margin: 0;
+  }
+  .copyright p a{
+      /* 设置链接文字颜色为 #353535（深灰色） */
+      color: #353535;
+  }
+  .copyright p a:hover{
+      /* 当鼠标悬停在链接上时，将链接文字颜色设置为 #2DCB74（鲜艳的绿色） */
+      color: #2DCB74;
+      /* 去除链接的下划线 */
+      text-decoration:none;
+  }
+  /*** 响应式设计***/
+ 
+  @media (max-width:640px){
+      /* 当屏幕宽度小于等于 640px 时的样式 */
+      h1,.h1,h2,.h2,h3,.h3 {
+          /* 设置 h1、.h1、h2、.h2、h3、.h3 元素的上下外边距为 0px */
+          margin-top: 0px;
+          margin-bottom: 0px;
+      }
+     .grid_5 h3,.grid_5 h2,.grid_5 h1,.grid_5 h4,.grid_5 h5,h3.hdg,h3.bars {
+          /* 设置特定元素的底部外边距为 0.5em */
+          margin-bottom:.5em;
+      }
+     .progress {
+          /* 设置进度条高度为 10px，底部外边距为 10px */
+          height: 10px;
+          margin-bottom: 10px;
+      }
+      ol.breadcrumb li,.grid_3 p,ul.list-group li,li.list-group-item1 {
+          /* 设置特定元素的字体大小为 14px */
+          font-size: 14px;
+      }
+     .breadcrumb {
+          /* 设置面包屑导航的底部外边距为 10px */
+          margin-bottom: 10px;
+      }
+     .well {
+          /* 设置 well 容器的字体大小为 14px，底部外边距为 10px */
+          font-size: 14px;
+          margin-bottom: 10px;
+      }
+      h2.typoh2 {
+          /* 设置特定 h2 元素的字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .grid_4 {
+          /* 设置特定网格的顶部外边距为 30px */
+          margin-top: 30px;
+      }
+  }
+  @media (max-width:480px){
+      /* 当屏幕宽度小于等于 480px 时的样式 */
+     .table h1 {
+          /* 设置表格中的 h1 元素的字体大小为 26px */
+          font-size: 26px;
+      }
+     .table h2 {
+          /* 设置表格中的 h2 元素的字体大小为 23px */
+          font-size: 23px;
+      }
+     .table h3 {
+          /* 设置表格中的 h3 元素的字体大小为 20px */
+          font-size: 20px;
+      }
+     .label {
+          /* 设置标签的字体大小为 53% */
+          font-size: 53%;
+      }
+     .alert,p {
+          /* 设置警告框和段落的字体大小为 14px */
+          font-size: 14px;
+      }
+     .pagination {
+          /* 设置分页的顶部外边距为 20px，底部外边距为 0px，左边距为 0px */
+          margin: 20px 0 0px;
+      }
+  }
+  @media (max-width:320px){
+      /* 当屏幕宽度小于等于 320px 时的样式 */
+     .grid_4 {
+          /* 设置特定网格的顶部外边距为 18px */
+          margin-top: 18px;
+      }
+     .alert,p,ol.breadcrumb li,.grid_3 p,.well,ul.list-group li,li.list-group-item1,a.list-group-item {
+          /* 设置多个元素的字体大小为 13px */
+          font-size: 13px;
+      }
+     .alert {
+          /* 设置警告框的内边距为 10px，底部外边距为 10px */
+          padding: 10px;
+          margin-bottom: 10px;
+      }
+      ul.pagination li a {
+          /* 设置分页中的链接的字体大小为 14px，内边距为上下 5px，左右 11px，重要声明 */
+          font-size: 14px;
+          padding: 5px 11px!important;
+      }
+     .list-group {
+          /* 设置列表组的底部外边距为 10px */
+          margin-bottom: 10px;
+      }
+     .well {
+          /* 设置 well 容器的内边距为 10px */
+          padding: 10px;
+      }
+     .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td {
+          /* 设置表格中的表头、表体和表尾的单元格的字体大小为 0.81em */
+          font-size: 0.81em;
+      }
+     .table td,.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th {
+          /* 设置表格中的单元格的内边距为上下左右各 13px，重要声明 */
+          padding: 13px!important;
+      }
+     .codes.row {
+          /* 设置特定类名中的行元素的外边距为 0 */
+          margin: 0;
+      }
+  }
+  /*-- 关于&联系&表单等页面设计 --*/
+  .about,.codes,.gallery,.blog,.contact,.login{
+      /* 设置内边距为上 4em，左右和下为 0；设置背景颜色为 #F9F9F9（浅灰色） */
+      padding: 4em 0 0 0;
+      background: #F9F9F9;
+  }
+  .about-heading {
+      /* 设置文本居中对齐 */
+      text-align: center;
+  }
+  .about-heading h2,.codes-heading h2,.gallery-heading h2,.blog-heading h2,.contact-heading h2{
+      /* 设置文字颜色为 #202020（深黑色） */
+      color: #202020;
+      /* 设置字体大小为 3em */
+      font-size: 3em;
+      /* 设置字体为 'Francois One'，如果该字体不可用则使用 sans-serif 字体族 */
+      font-family: 'Francois One', sans-serif;
+      /* 清除外边距 */
+      margin: 0;
+  }
+  .about-bottom{
+      /* 设置底部外边距为 2em */
+      margin:2em 0;
+  }
+  .about-bottom img{
+      /* 设置图片宽度为 100% */
+      width:100%;
+  }
+  .about-bottom p{
+      /* 设置字体大小为.875em */
+      font-size:.875em;
+      /* 设置文字颜色为 #353535（深灰色） */
+      color: #353535;
+      /* 设置顶部外边距为 2em */
+      margin: 2em 0 0 0;
+      /* 设置行高为 1.8em */
+      line-height: 1.8em;
+  }
+  .team{
+      /* 设置内边距为上下各 4em；设置背景颜色为 #DBAC76（一种暖色调颜色） */
+      padding: 4em 0;
+      background: #DBAC76;
+  }
+  .team-heading{
+      /* 设置文本居中对齐 */
+      text-align:center;
+  }
+  .team-grid{
+      /* 设置顶部外边距为 2em */
+      margin:2em 0 0 0;
+  }
+  .team-grid img{
+      /* 设置图片宽度为 100% */
+      width:100%;
+  }
+  .team-grid h4{
+      /* 设置文字颜色为白色 #FFF */
+      color: #FFF;
+      /* 设置顶部外边距为 1em */
+      margin: 1em 0 0 0;
+  }
+  .team-grid p{
+      /* 设置文字颜色为白色 #FFF */
+      color:#FFF;
+  }
+  .team-icons{
+      /* 清除浮动效果，设置为无；设置顶部外边距为 1em */
+      float:none;
+      margin:1em 0 0 0;
+  }
+  /*--Shortcodes--*/
+  .codes-heading {
+      /* 设置文本居中对齐 */
+      text-align: center;
+  }
+  h3.hdg {
+      /* 设置字体大小为 2.5em；设置文字颜色为黑色 #000，并强制覆盖其他可能的样式 */
+      font-size: 2.5em;
+      color:#000!important;
+  }
+  .show-grid [class^=col-] {
+      /* 设置背景颜色为白色 #fff；设置文本居中对齐；设置底部外边距为 10px；设置行高为 2em；设置边框为 10px 宽的实线，颜色为 #f0f0f0（浅灰色） */
+      background: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 2em;
+    border: 10px solid #f0f0f0;
+  }
+  .show-grid [class*="col-"]:hover {
+      /* 当鼠标悬停在元素上时，设置背景颜色为 #e0e0e0（稍暗的浅灰色） */
+      background: #e0e0e0;
+  }
+  .grid_3{
+      /* 设置底部外边距为 2em */
+      margin-bottom:2em;
+  }
+  .xs h3, h3.m_1{
+      /* 设置文字颜色为黑色 #000；设置字体大小为 1.7em；设置字体粗细为 300；设置底部外边距为 1em */
+      color:#000;
+      font-size:1.7em;
+      font-weight:300;
+      margin-bottom: 1em;
+  }
+  .grid_3 p{
+      /* 设置文字颜色为 #555（稍暗的灰色）；设置字体大小为 0.85em；设置底部外边距为 1em；设置字体粗细为 300 */
+      color: #555;
+      font-size: 0.85em;
+      margin-bottom: 1em;
+      font-weight: 300;
+  }
+  .grid_4{
+      /* 清除背景颜色；设置顶部外边距为 50px */
+      background:none;
+      margin-top:50px;
+  }
+  .label {
+      /* 设置字体粗细为 300，并强制覆盖其他可能的样式；设置边框半径为 4px */
+      font-weight: 300!important;
+      border-radius:4px;
+  }
+  .grid_5{
+      /* 清除背景颜色；设置内边距为上下各 2em */
+      background:none;
+      padding:2em 0;
+  }
+  .grid_5 h3,.grid_5 h2,.grid_5 h1,.grid_5 h4,.grid_5 h5, h3.hdg {
+      /* 设置底部外边距为 1em；设置文字颜色为 #333（深灰色） */
+      margin-bottom:1em;
+      color: #333;
+  }
+  .table > thead > tr > th,.table > tbody > tr > th,.table > tfoot > tr > th,.table > thead > tr > td,.table > tbody > tr > td,.table > tfoot > tr > td {
+      /* 清除表格边框的顶部边框，并强制覆盖其他可能的样式 */
+      border-top: none!important;
+  }
+  .tab-content >.active {
+      /* 当元素处于活动状态时，设置为块级元素显示；设置可见性为可见 */
+      display: block;
+      visibility: visible;
+  }
+  .pagination >.active > a,.pagination >.active > span,.pagination >.active > a:hover,.pagination >.active > span:hover,.pagination >.active > a:focus,.pagination >.active > span:focus {
+      /* 设置 z-index 为 0 */
+      z-index: 0;
+  }
+  .badge-primary {
+      /* 设置背景颜色为 #03a9f4（一种蓝色） */
+      background-color: #03a9f4;
+  }
+  
+  
+  .badge-success {
+      /* 设置成功状态徽章的背景颜色为 #8bc34a（一种绿色） */
+      background-color: #8bc34a;
+  }
+  .badge-warning {
+      /* 设置警告状态徽章的背景颜色为 #ffc107（一种黄色） */
+      background-color: #ffc107;
+  }
+  .badge-danger {
+      /* 设置危险状态徽章的背景颜色为 #e51c23（一种红色） */
+      background-color: #e51c23;
+  }
+  .grid_3 p{
+      /* 设置段落的行高为 2em */
+      line-height: 2em;
+      /* 设置文字颜色为 #888（一种灰色） */
+      color: #888;
+      /* 设置字体大小为 0.9em */
+      font-size: 0.9em;
+      /* 设置底部外边距为 1em */
+      margin-bottom: 1em;
+      /* 设置字体粗细为 300 */
+      font-weight: 300;
+  }
+  .bs-docs-example {
+      /* 设置外边距为上下各 1em，左右为 0 */
+      margin: 1em 0;
+  }
+  section#tables p {
+      /* 设置顶部外边距为 1em */
+      margin-top: 1em;
+  }
+  .tab-container.tab-content {
+      /* 设置边框圆角为左上角 0，右上角 2px，右下角 2px，左下角 2px */
+      border-radius: 0 2px 2px 2px;
+      /* 设置边框为 1px 宽的实线，颜色为 #e0e0e0（浅灰色） */
+      border: 1px solid #e0e0e0;
+      /* 设置内边距为上下左右各 16px */
+      padding: 16px;
+      /* 设置背景颜色为白色 #ffffff */
+      background-color: #ffffff;
+  }
+  .table td,.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th {
+      /* 设置内边距为上下各 15px，并强制覆盖其他可能的样式 */
+      padding: 15px!important;
+  }
+  .table > thead > tr > th,.table > tbody > tr > th,.table > tfoot > tr > th,.table > thead > tr > td,.table > tbody > tr > td,.table > tfoot > tr > td {
+      /* 设置字体大小为 0.9em */
+      font-size: 0.9em;
+      /* 设置文字颜色为 #555（一种灰色） */
+      color: #555;
+      /* 清除表格边框的顶部边框，并强制覆盖其他可能的样式 */
+      border-top: none!important;
+  }
+  .tab-content >.active {
+      /* 当元素处于活动状态时，设置为块级元素显示；设置可见性为可见 */
+      display: block;
+      visibility: visible;
+  }
+  .label {
+      /* 设置字体粗细为 300，并强制覆盖其他可能的样式 */
+      font-weight: 300!important;
+  }
+  .label {
+      /* 设置内边距为上下各 4px，左右各 6px；清除边框；清除文本阴影 */
+      padding: 4px 6px;
+      border: none;
+      text-shadow: none;
+  }
+  .nav-tabs {
+      /* 设置底部外边距为 1em */
+      margin-bottom: 1em;
+  }
+  .alert {
+      /* 设置字体大小为 0.85em */
+      font-size: 0.85em;
+  }
+  h1.t-button,h2.t-button,h3.t-button,h4.t-button,h5.t-button {
+      /* 设置行高为 1.8em；设置顶部外边距为 0.5em；设置底部外边距为 0.5em */
+      line-height:1.8em;
+      margin-top:0.5em;
+      margin-bottom: 0.5em;
+  }
+  li.list-group-item1 {
+      /* 设置行高为 2.5em */
+      line-height: 2.5em;
+  }
+  .input-group {
+      /* 设置底部外边距为 20px */
+      margin-bottom: 20px;
+  }
+  .in-gp-tl{
+      /* 清除内边距 */
+      padding:0;
+  }
+  .in-gp-tb{
+      /* 清除右侧内边距 */
+      padding-right:0;
+  }
+  .list-group {
+      /* 设置底部外边距为 48px */
+      margin-bottom: 48px;
+  }
+  ol {
+      /* 设置底部外边距为 44px */
+      margin-bottom: 44px;
+  }
+  h2.typoh2{
+      /* 设置外边距为上下左右分别是 0、0、10px、0 */
+      margin: 0 0 10px;
+  }
+  
+ /*** 图片模块****/
+  
+
+
+
+  .gallery {
+      /* 设置内边距为上下各 4em，左右为 0 */
+      padding: 4em 0;
+  }
+  .gallery-heading{
+      /* 设置文本居中对齐 */
+      text-align:center;
+  }
+  .gallery-grids {
+      /* 设置顶部外边距为 2em */
+      margin: 2em 0 0 0;
+  }
+  .grid {
+      /* 设置定位为相对定位；清除左右浮动；设置在页面水平居中；设置最大宽度为 1000px；清除列表样式；设置文本居中对齐 */
+      position: relative;
+      clear: both;
+      margin: 0 auto;
+      max-width: 1000px;
+      list-style: none;
+      text-align: center;
+  }
+  .grid figure {
+      /* 设置定位为相对定位；清除左右浮动；设置外边距为上下各 10px、左右为 0；设置高度自动适应内容；设置文本居中对齐；设置鼠标为指针样式 */
+      position: relative;
+      clear: both;
+      margin: 10px 0;
+      height: auto;
+      text-align: center;
+      cursor: pointer;
+  }
+  .grid figure img {
+      /* 设置定位为相对定位；显示为块级元素；设置最小高度为 100%；宽度为 100%；设置不透明度为 0.8 */
+      position: relative;
+      display: block;
+      min-height: 100%;
+      width: 100%;
+      opacity: 0.8;
+  }
+  .grid figure figcaption {
+      /* 设置内边距为上下各 2em；设置文字颜色为白色 #fff；设置文本为大写；设置字体大小为 1.25em */
+      padding: 2em;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.25em;
+      /* 设置在 Safari 和 Chrome 浏览器下背面不可见 */
+      -webkit-backface-visibility: hidden;
+      /* 设置背面不可见 */
+      backface-visibility: hidden;
+  }
+  .grid figure figcaption::before,
+  .grid figure figcaption::after {
+      /* 设置鼠标事件不响应 */
+      pointer-events: none;
+  }
+  .grid figure figcaption,
+  .grid figure figcaption > a {
+      /* 设置绝对定位；定位在顶部和左侧为 0；宽度和高度为 100% */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  .grid figure figcaption > a {
+      /* 设置 z-index 为 1000；设置文本缩进为 200%（使文本不可见）；设置空白符处理为不换行；设置字体大小为 0；设置不透明度为 0 */
+      z-index: 1000;
+      text-indent: 200%;
+      white-space: nowrap;
+      font-size: 0;
+      opacity: 0;
+  }
+  .grid figure h3 {
+      /* 设置单词间距为 -0.15em；设置字体粗细为 300；清除外边距；设置文本左对齐；设置字体大小为 1.5em */
+      word-spacing: -0.15em;
+      font-weight: 300;
+      margin: 0;
+      text-align: left;
+      font-size: 1.5em;
+  }
+  .grid figure h2 span {
+      /* 设置字体粗细为 800 */
+      font-weight: 800;
+  }
+  .grid figure h2,
+  .grid figure p {
+      /* 清除外边距 */
+      margin: 0;
+  }
+  .grid figure p {
+      /* 设置字母间距为 1px；设置字体大小为 68.5% */
+      letter-spacing: 1px;
+      font-size: 68.5%;
+  }
+  figure.effect-apollo img {
+      /* 设置不透明度为 0.95；设置过渡效果为不透明度和缩放变换，持续时间为 0.35s；设置缩放变换为 scale3d(1.05,1.05,1) */
+      opacity: 0.95;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale3d(1.05,1.05,1);
+      transform: scale3d(1.05,1.05,1);
+  }
+  figure.effect-apollo figcaption::before {
+      /* 设置绝对定位在顶部和左侧为 0；宽度和高度为 100%；设置背景颜色为 rgba(255,255,255,0.5)；设置内容为空字符串；设置过渡效果为变换效果，持续时间为 0.6s；设置变换效果为 scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0) */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.5);
+      content: '';
+      -webkit-transition: -webkit-transform 0.6s;
+      transition: transform 0.6s;
+      -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+      transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+  }
+  figure.effect-apollo p {
+      /* 设置绝对定位在右侧和底部为 0；设置外边距为右侧 3em；设置最大宽度为 150px；设置右侧边框为 4px 宽的白色实线；设置文本右对齐；设置不透明度为 0；设置过渡效果为不透明度，持续时间为 0.35s */
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 3em;
+      padding: 0 1em;
+      max-width: 150px;
+      border-right: 4px solid #fff;
+      text-align: right;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s;
+  }
+  figure.effect-apollo h2 {
+      /* 设置文本左对齐 */
+      text-align: left;
+  }
+  figure.effect-apollo:hover img {
+      /* 设置不透明度为 0.6；设置变换效果为 scale3d(1,1,1) */
+      opacity: 0.6;
+      -webkit-transform: scale3d(1,1,1);
+      transform: scale3d(1,1,1);
+  }
+  figure.effect-apollo:hover figcaption::before {
+      /* 设置变换效果为 scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0) */
+      -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+      transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+  }
+  figure.effect-apollo:hover p {
+      /* 设置不透明度为 1；设置过渡效果延迟 0.1s */
+      opacity: 1;
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+  }
+ 
+ .gallery {
+    padding: 4em 0;
+}
+.gallery-heading{
+	text-align:center;
+}
+.gallery-grids {
+    margin: 2em 0 0 0;
+}
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+
+.grid figure {
+	position: relative;	
+	overflow: hidden;
+	margin: 10px 0;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h3 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    margin: 0;
+    text-align: left;
+    font-size: 1.5em;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+
+
+figure.effect-apollo img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 3em;
+	padding: 0 1em;
+	max-width: 150px;
+	border-right: 4px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-apollo h2 {
+	text-align: left;
+}
+
+figure.effect-apollo:hover img {
+	opacity: 0.6;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+  
+
+  
+  /*-- 列表页面设计 --*/
+  
+  
+  .blog {
+      /* 设置博客容器的内边距为上下 4em，左右无内边距 */
+      padding: 4em 0;
+  }
+  .blog-heading{
+      /* 设置博客标题文本居中对齐 */
+      text-align:center;
+  }
+  .blog-top-grids {
+      /* 设置博客顶部网格容器的外边距为上下边距 4em，左右无外边距，且在父元素下方开始显示 */
+      margin: 4em 0 0 0;
+  }
+  .blog-left {
+      /* 设置博客左侧容器的外边距为上下边距分别为 0em 和 2em，右边距为 0em */
+      margin: 0em 0 2em 0;
+      padding-right: 1em;
+  }
+  .blog-left-right {
+      /* 设置博客左侧右侧容器的上边距为 1em */
+      margin-top: 1em;
+  }
+  .blog-left-right a{
+      /* 设置博客左侧右侧容器中的链接字体大小为 1.2em，外边距为上下 0，左右 0.5em，颜色为 #353535，无下划线，字母间距为 1px */
+      font-size: 1.2em;
+      margin: 0 0.5em 0;
+      color: #353535;
+      text-decoration: none;
+      letter-spacing: 1px;
+  }
+  .blog-left-right a:hover{
+      /* 设置博客左侧右侧容器中的链接在鼠标悬停时无下划线，颜色变为 #DBAC76 */
+      text-decoration: none;
+      color: #DBAC76;
+  }
+  .blog-left-left {
+      /* 设置博客左侧左侧容器的内边距为 0，重要声明（!important） */
+      padding: 0!important;
+  }
+  .blog-left-left p{
+      /* 设置博客左侧左侧容器中的段落字体大小为 0.9em，外边距为上下 0 和 1em，颜色为 #555555 */
+      margin: 0 0 1em;
+      font-size:.9em;
+      color: #555555;
+  }
+  .blog-left-left p a {
+      /* 设置博客左侧左侧容器中的段落中的链接颜色为 #2DCB74，无下划线 */
+      color: #2DCB74;
+      text-decoration: none;
+  }
+  .blog-left-left p a:hover{
+      /* 设置博客左侧左侧容器中的段落中的链接在鼠标悬停时颜色变为 #DBAC76 */
+      color:#DBAC76;
+  }
+  .blog-left-left a img{
+      /* 设置博客左侧左侧容器中的链接中的图片宽度为 100% */
+      width:100%;
+  }
+  .blog-left-right p{
+      /* 设置博客左侧右侧容器中的段落字体大小为 0.9em，外边距为上下 0.5em，颜色为 #353535，行高为 1.8em */
+      font-size:.9em;
+      margin: 0.5em 0;
+      color: #353535;
+      line-height: 1.8em;
+  }
+  ul.pagination {
+      /* 设置分页列表的外边距为上下 2em，左右 0，且在父元素上方开始显示 */
+      margin: 2em 0 0;
+  }
+  .blog-top-right-grid {
+      /* 设置博客顶部右侧网格容器的右边距为 0，重要声明（!important） */
+      padding-right: 0!important;
+  }
+  .Categories {
+      /* 设置分类容器的外边距为上下左右均为 0 */
+      margin:0;
+  }
+  .Categories h3{
+      /* 设置分类标题的字体大小为 1.5em，外边距为上下 0 和 1em，下边框为 0.5em，颜色为 #2DCB74 */
+      font-size: 1.5em;
+      margin: 0 0 1em 0;
+      padding-bottom:.5em;
+      color: #2DCB74;
+  }
+  .Categories ul{
+      /* 设置分类列表的内边距和外边距均为 0 */
+      margin:0;
+      padding:0;
+  }
+  .Categories ul li{
+      /* 设置分类列表项为块级元素，设置背景图片为 url(../images/arrow.png)，不重复，位置为 0px 2px，设置外边距为底部 1em */
+      display: block;
+      background: url(../images/arrow.png) no-repeat 0px 2px;
+      margin-bottom: 1em;
+  }
+  .Categories ul li a{
+      /* 设置分类列表项中的链接字体大小为 0.875em，外边距为 0，颜色为 #353535，设置左边距为 2em */
+      font-size:.875em;
+      margin: 0;
+      color: #353535;
+      padding-left: 2em;
+  }
+  .Categories ul li a:hover{
+      /* 设置分类列表项中的链接在鼠标悬停时颜色变为 #2DCB74，无下划线，设置过渡效果为 0.5s 所有属性，包括浏览器前缀的过渡效果 */
+    color: #2DCB74;
+    text-decoration: none;
+    transition:.5s all;
+    -webkit-transition:.5s all;
+    -moz-transition:.5s all;
+    -o-transition:.5s all;
+    -ms-transition:.5s all;
+  }
+  .comments{
+      /* 设置评论容器的外边距为上下 4em，左右 0 */
+      margin: 4em 0;
+  }
+  .comments h3{
+      /* 设置评论标题的字体大小为 1.5em，外边距为上下 0 和 1em，下边框为 0.5em，颜色为 #2DCB74 */
+      font-size: 1.5em;
+      margin: 0 0 1em 0;
+      padding-bottom:.5em;
+      color: #2DCB74;
+  }
+  .comments-left{
+      /* 设置评论左侧容器的内边距为上下左右各 0.5em，边框为 1px 实线黑色 */
+      padding:.5em;
+      border: 1px solid #000000;
+  }
+  .comments-left img{
+      /* 设置评论左侧容器中的图片宽度为 100% */
+      width:100%;
+  }
+  .comments-right h5{
+      /* 设置评论右侧容器中的标题字体大小为 1em，外边距为上下 0 和 0.5em，颜色为 #2DCB74，字母间距为 1px */
+      font-size: 1em;
+      margin: 0 0.5em 0;
+      color: #2DCB74;
+      letter-spacing: 1px;
+  }
+  .comments-right a{
+      /* 设置评论右侧容器中的链接字体大小为 1em，外边距为 0，颜色为 #575353，无下划线 */
+      font-size: 1em;
+      margin: 0;
+      color: #575353;
+      text-decoration: none;
+  }
+  .comments-right a:hover{
+      /* 设置评论右侧容器中的链接在鼠标悬停时无下划线 */
+      text-decoration:none;
+  }
+  .comments-right p{
+      /* 设置评论右侧容器中的段落为块级元素，颜色为 #DBAC76，外边距为上下 0.3em 和 0，字体大小为 0.8em */
+      display: block;
+      color: #DBAC76;
+      margin:.3em 0 0 0;
+      font-size:.8em;
+  }
+  .comments-text {
+      /* 设置评论文本容器的内边距为上下 1.5em，下边框为 1px 实线灰色 */
+      padding: 1.5em 0;
+      border-bottom: 1px solid #868686;
+  }
+  .comments-text:nth-child(4) {
+      /* 设置评论文本容器中的第四个子元素无边框 */
+      border: none;
+  }
+  .pagination > li > a,.pagination > li > span{
+      /* 设置分页列表中的链接和文本的颜色为 #353535，背景颜色为 #F4F7F9 */
+      color:#353535;
+      background-color: #F4F7F9;
+  }
+  
+  /*-- 详情页面设计 --*/
+  
+  
+  
+  
+  
+  
+  
+  .single-left-left p{
+      /* 设置单页左侧左侧容器中的段落外边距为上下 0 和 1em，字体大小为 0.9em，字体粗细为 500，颜色为 #555555 */
+      margin: 0 0 1em;
+      font-size:.9em;
+      font-weight: 500;
+      color: #555555;
+  }
+  .single-left-left p a {
+      /* 设置单页左侧左侧容器中的段落中的链接颜色为 #2DCB74，无下划线 */
+      color: #2DCB74;
+      text-decoration: none;
+  }
+  .single-left-left p a:hover{
+      /* 设置单页左侧左侧容器中的段落中的链接在鼠标悬停时颜色变为 #DBAC76 */
+      color:#DBAC76;
+  }
+  .single-left-left img{
+      /* 设置单页左侧左侧容器中的图片宽度为 100% */
+      width:100%;
+  }
+  .left-single{
+      /* 设置左侧单页容器的右边距为 2em */
+      padding-right: 2em;
+  }
+  .response {
+      /* 设置响应容器的底部外边距为 5em */
+      margin-bottom: 5em;
+  }
+  .response h3 {
+      /* 设置响应标题的字体大小为 1.5em，外边距为上下 0 和 1em，颜色为 #2DCB74 */
+      font-size: 1.5em;
+      margin: 0 0 1em 0;
+      color: #2DCB74;
+      
+  }
+  .media.response-info {
+      /* 设置媒体响应信息容器的顶部外边距为 3em */
+      margin-top: 3em;
+  }
+  .media-left.response-text-left {
+      /* 设置媒体左侧响应文本左侧容器的宽度为 13%，向左浮动 */
+      width: 13%;
+      float: left;
+  }
+  .media-left.response-text-left a img {
+      /* 设置媒体左侧响应文本左侧容器中的链接中的图片宽度为 80% */
+      width: 80%;
+  }
+  .media-left.response-text-left h5 a {
+      /* 设置媒体左侧响应文本左侧容器中的标题中的链接颜色为 #DBAC76 */
+      color: #DBAC76;
+  }
+  .media-left.response-text-left h5 a:hover {
+      /* 设置媒体左侧响应文本左侧容器中的标题中的链接在鼠标悬停时颜色变为 #2DCB74，无下划线 */
+      color: #2DCB74;
+      text-decoration:none;
+  }
+  .response-text-left h5 {
+      /* 设置响应文本左侧容器中的标题字体大小为 1em，外边距为上下 1em 和 0，颜色为 #000 */
+      font-size: 1em;
+      margin: 1em 0 0 0;
+      color: #000;
+  }
+  .response-text-right p {
+      /* 设置响应文本右侧容器中的段落颜色为 #353535，字体大小为 0.9em，外边距为上下 0 和 1em，行高为 1.8em */
+      color: #353535;
+      font-size:.9em;
+      margin: 0 0 1em;
+      line-height: 1.8em;
+  }
+  .response-text-right ul {
+      /* 设置响应文本右侧容器中的无序列表内边距为 0 */
+      padding: 0;
+      text-align: right;
+  }
+  .response-text-right ul li {
+      /* 设置响应文本右侧容器中的无序列表项为内联块元素，显示为水平排列，颜色为 #AFAFAF，字体大小为 0.9em，右边距为 1em */
+      display: inline-block;
+      color: #AFAFAF;
+      font-size:.9em;
+      margin-right: 1em;
+  }
+  .response-text-right ul li a {
+      /* 设置响应文本右侧容器中的无序列表项中的链接颜色为 #2DCB74，字体大小为 0.9em，无下划线 */
+      color: #2DCB74;
+      font-size:.9em;
+      text-decoration: none;
+  }
+  .response-text-right ul li a:hover {
+      /* 设置响应文本右侧容器中的无序列表项中的链接在鼠标悬停时颜色变为 #DBAC76 */
+      color: #DBAC76;
+  }
+  .media.response-info {
+      /* 设置媒体响应信息容器的顶部外边距为 3em */
+      margin-top: 3em;
+  }
+  .opinion h2{
+      /* 设置意见容器中的标题字体大小为 1.5em，外边距为上下 0 和 1em，下边框为 0.5em，颜色为 #2DCB74 */
+      font-size: 1.5em;
+      margin: 0 0 1em 0;
+      padding-bottom:.5em;
+      color: #2DCB74;
+  }
+  .opinion form input[type="text"] {
+      /* 设置意见表单中的文本输入框宽度为 100%，颜色为 #898888，无轮廓，字体大小为 1em，内边距为上下左右各 0.5em，边框为 1px 实线 #D5D4D4，去除浏览器默认样式 */
+      width: 100%;
+      color: #898888;
+      outline: none;
+      font-size: 1em;
+      padding:.5em;
+      margin: 0.5em 1em 0;
+      border: solid 1px #D5D4D4;
+      -webkit-appearance: none;
+  }
+  .opinion form textarea {
+      /* 设置意见表单中的文本域不可调整大小，宽度为 100%，颜色为 #898888，无轮廓，字体大小为 1em，内边距为上下左右各 0.5em，边框为 1px 实线 #D5D4D4，去除浏览器默认样式，最小高度为 125px */
+      resize: none;
+      width: 100%;
+      color: #898888;
+      font-size: 1em;
+      outline: none;
+      resize:none;
+      padding:.5em;
+      border: solid 1px #D5D4D4;
+      min-height: 125px;
+      -webkit-appearance: none;
+  }
+  .opinion form input[type="submit"] {
+      /* 设置意见表单中的提交按钮无边框，无轮廓，颜色为 #A8A8A8，无背景，字体大小为 1em，外边距为上下各 0.6em，去除浏览器默认样式 */
+    border: none;
+    outline: none;
+    color: #A8A8A8;
+    background: none;
+    font-size: 1em;
+    margin:.6em 0;
+    -webkit-appearance: none;
+  }
+  .opinion form input[type="submit"]:hover {
+      /* 设置意见表单中的提交按钮在鼠标悬停时颜色变为 #2DCB74，设置过渡效果为 0.5s 所有属性，包括浏览器前缀的过渡效果 */
+      color:#2DCB74;
+      transition:.5s all;
+      -webkit-transition:.5s all;
+      -moz-transition:.5s all;
+      -o-transition:.5s all;
+      -ms-transition:.5s all;
+  }
+  .blog-left-bottom p{
+      /* 设置博客左侧底部容器中的段落字体大小为 0.9em，外边距为上下 0.5em，颜色为 #353535，行高为 1.8em */
+      font-size:.9em;
+      margin: 0.5em 0;
+      color: #353535;
+      line-height: 1.8em;
+  }
+  .blog-left-bottom {
+      /* 设置博客左侧底部容器的外边距为上下各 0.5em */
+      margin:.5em 0;
+  }
+  /*-- contact --*/
+  .contact-heading{
+      /* 设置联系标题文本居中对齐 */
+      text-align: center;
+  }
+  .contact h4 {
+      /* 设置联系容器中的标题颜色为 #2DCB74，字体大小为 1.2em，外边距为上下 0 和 1em */
+      color: #2DCB74;
+      font-size: 1.2em;
+      margin: 0 0 1em;
+  }
+  .map {
+      /* 设置地图容器的顶部外边距为 3em */
+    margin-top: 3em;
+  }
+  .map iframe {
+      /* 设置地图容器中的 iframe 宽度为 100%，高度为 340px，无边框 */
+      width: 100%;
+      height: 340px;
+      border: none;
+  }
+  .address {
+      /* 设置地址容器的顶部外边距为 6em */
+       margin: 6em 0 0;
+  }
+  .address-grids {
+      /* 设置地址网格容器的内边距为 0 */
+      padding: 0;
+  }
+  .address h4 {
+      /* 设置地址容器中的标题外边距为上下 0 和 0.5em */
+    margin: 0 0.5em;
+  }
+  .contact-infom {
+      /* 设置联系信息容器的顶部外边距为 4em */
+     margin: 4em 0;
+  }
+  .address p {
+      /* 设置地址容器中的段落外边距为上下 0 和 0.3em，字体大小为 0.9em，颜色为 #353535，行高为 1.8em */
+      margin: 0 0.3em 0;
+      font-size: 0.9em;
+      color: #353535;
+      line-height: 1.8em;
+  }
+  .address ul{
+      /* 设置地址容器中的无序列表内边距和外边距为 0 */
+      padding:0;
+      margin:0;
+  }
+  .address ul li{
+      /* 设置地址容器中的无序列表项为内联块元素 */
+      display: inline-block;
+  }
+  .address a {
+      /* 设置地址容器中的链接颜色为 #353535，字体大小为 0.9em，字母间距为 1px，设置过渡效果为 0.5s 所有属性 */
+      color: #353535;
+      font-size:.9em;
+      letter-spacing: 1px;
+      transition:.5s all;
+  }
+  .address a:hover {
+      /* 设置地址容器中的链接在鼠标悬停时颜色变为 #DBAC76，无下划线 */
+    color:#DBAC76;
+    text-decoration: none;
+  }
+  .contact-infom p {
+      /* 设置联系信息容器中的段落外边距为 0，字体大小为 0.9em，颜色为 #353535，行高为 1.8em */
+      margin: 0;
+      font-size: 0.9em;
+      color: #353535;
+      line-height: 1.8em;
+  }
+  .contact-form {
+      /* 设置联系表单容器的顶部外边距为 3em，底部内边距为 2em */
+      margin: 3em 0 0;
+      padding-bottom: 2em;
+  }
+  
+
+  /* 为类名为.contact-form下的input标签且类型为text的元素设置样式 */  
+  .contact-form input[type="text"] {  
+    display: inline-block; /* 设置为内联块级元素 */  
+    background: none; /* 无背景 */  
+    border: 1.5px solid #CBCBCB; /* 边框为1.5px实线，颜色为#CBCBCB */  
+    width: 31.9%; /* 宽度为31.9% */  
+    outline: none; /* 去除焦点时的轮廓线 */  
+    padding: 10px 15px 10px 15px; /* 内边距为上下10px，左右15px */  
+    font-size: .9em; /* 字体大小为0.9em */  
+    color: #111111; /* 文字颜色为#111111 */  
+    margin-bottom: 1.5em; /* 底部外边距为1.5em */  
+  }  
+    
+  /* 为类名为.contact-form下的input标签且类型为email的元素设置样式 */  
+  .contact-form input[type="email"] {  
+      display: inline-block; /* 设置为内联块级元素 */  
+      background: none; /* 无背景 */  
+      border: 1.5px solid #CBCBCB; /* 边框为1.5px实线，颜色为#CBCBCB */  
+      width: 32%; /* 宽度为32% */  
+      outline: none; /* 去除焦点时的轮廓线 */  
+      padding: 10px 15px 10px 15px; /* 内边距为上下10px，左右15px */  
+      font-size: .9em; /* 字体大小为0.9em */  
+      color: #111111; /* 文字颜色为#111111 */  
+      margin: 0 1.25em; /* 左右外边距为1.25em，上下外边距为0 */  
+  }  
+    
+  /* 为类名为.contact-form下的textarea元素设置样式 */  
+  .contact-form textarea {  
+      background: none; /* 无背景 */  
+      border: 1.5px solid #CBCBCB; /* 边框为1.5px实线，颜色为#CBCBCB */  
+      width: 100%; /* 宽度为100% */  
+      display: block; /* 设置为块级元素 */  
+      height: 150px; /* 高度为150px */  
+      outline: none; /* 去除焦点时的轮廓线 */  
+      font-size: 0.9em; /* 字体大小为0.9em */  
+      color: #111111; /* 文字颜色为#111111 */  
+      resize: none; /* 禁止调整大小 */  
+      padding: 10px 15px 10px 15px; /* 内边距为上下10px，左右15px */  
+      margin-bottom: 1em; /* 底部外边距为1em */  
+  }  
+    
+  /* 为同时拥有类名btn1, btn-1, btn-1b的button元素设置样式 */  
+  button.btn1.btn-1.btn-1b {  
+      color: #FFF; /* 文字颜色为白色 */  
+      border: none; /* 无边框 */  
+      background: #2DCB74; /* 背景颜色为#2DCB74 */  
+      padding: .5em 1.5em; /* 内边距为上下0.5em，左右1.5em */  
+      font-size: 1em; /* 字体大小为1em */  
+      outline: none; /* 去除焦点时的轮廓线 */  
+  }  
+    
+  /* 为同时拥有类名btn1, btn-1, btn-1b的button元素设置鼠标悬停时的样式 */  
+  button.btn1.btn-1.btn-1b:hover {  
+      color: #fff; /* 文字颜色为白色 */  
+      background: #DBAC76; /* 鼠标悬停时背景颜色变为#DBAC76 */  
+      transition: 0.5s all; /* 所有属性变化过渡时间为0.5秒 */  
+      -webkit-transition: 0.5s all; /* 兼容webkit内核浏览器的过渡效果 */  
+      -moz-transition: 0.5s all; /* 兼容moz内核浏览器的过渡效果 */  
+      -o-transition: 0.5s all; /* 兼容opera浏览器的过渡效果 */  
+      -ms-transition: 0.5s all; /* 兼容IE浏览器的过渡效果 */  
+  }
+  
+  
+  
+  /*-- 登录页面 --*/
+  .login{
+      /* 设置登录容器的内边距为上下 4em，左右无内边距 */
+      padding:4em 0;
+  }
+  .login-bg{
+      /* 设置登录背景容器的背景图片为 url(../images/l4.jpg)，不重复，从左上角开始显示，背景图片铺满整个容器，设置内边距为上下 7em，左右无内边距 */
+      background: url(../images/l4.jpg) no-repeat 0px 0px;
+      background-size: cover;
+      padding: 7em 0;
+  }
+  .login-body{
+      /* 设置登录主体容器的宽度为 40%，水平居中显示 */
+      width: 40%;
+      margin:0 auto;
+  }
+  .login-heading{
+      /* 设置登录标题容器的背景颜色为 #a8d8d8，内边距为上下 3em，左右无内边距 */
+      background: #a8d8d8;
+      padding: 3em 0em;
+  }
+  .login-heading h1{
+      /* 设置登录标题容器中的 h1 元素的颜色为白色，字体大小为 2em，文本居中对齐 */
+      color: #FFFFFF;
+      font-size: 2em;
+      text-align:center;
+  }
+  .login-info{
+      /* 设置登录信息容器的内边距为上下 4em、1.5em 和 1em，左右内边距为 1.5em，背景颜色为白色 */
+      padding: 4em 1.5em 1em;
+      background: #FFFFFF;
+  }
+  .login-info input[type="text"],.login-info input[type="password"] {
+      /* 设置登录信息容器中的文本输入框和密码输入框的字体大小为 0.9em，内边距为上下 10px，宽度为 100%，颜色为 #A8A8A8，无轮廓，边框为 1px 实线 #D3D3D3，去除顶部、左侧和右侧的边框，背景颜色为白色，外边距为上下 0em 和 1.5em */
+      font-size: 0.9em;
+      padding: 10px 0px;
+      width: 100%;
+      color: #A8A8A8;
+      outline: none;
+      border: 1px solid #D3D3D3;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      background: #FFFFFF;
+      margin: 0em 0em 1.5em 0em;
+  }
+  .login-info input[type="submit"] {
+      /* 设置登录信息容器中的提交按钮无边框，无轮廓，鼠标指针为指针形状，颜色为白色，背景颜色为 #a8d8d8，宽度为 100%，内边距为上下 0.5em 和左右 1em，字体大小为 1em，外边距为上下 1.5em 和 0em */
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #fff;
+      background: #a8d8d8	;
+      width: 100%;
+      padding:.5em 1em;
+      font-size: 1em;
+      margin: 1.5em 0 0;
+  }
+  .login-info input[type="submit"]:hover{
+      /* 设置登录信息容器中的提交按钮在鼠标悬停时背景颜色变为 #2DCB74，设置过渡效果为 0.5s 所有属性，包括浏览器前缀的过渡效果 */
+      background:#2DCB74;
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all ;
+      -ms-transition: 0.5s all;
+  }
+  .forgot-top-grids {
+      /* 设置忘记密码顶部网格容器的顶部外边距为 2em */
+      margin-top: 2em;
+  }
+  .login-info label.checkbox {
+      /* 设置登录信息容器中的复选框标签的左边距为 1.3em，顶部外边距为 0，字体大小为 1em，颜色为 #555，显示为内联块元素，鼠标指针为指针形状 */
+      margin-left: 1.3em;
+      margin-top: 0;
+      font-size: 1em;
+      color: #555;
+      display: inline-block;
+      cursor: pointer;
+  }
+  .forgot {
+      /* 设置忘记密码容器向右浮动，顶部外边距为 0.3em */
+      float: right;
+      margin-top:.3em;
+  }
+  .forgot a {
+      /* 设置忘记密码容器中的链接字体大小为 0.75em，颜色为 #2DCB74，显示为块级元素，文本转换为大写 */
+      font-size:.75em;
+      color: #2DCB74;
+      display: block;
+      text-transform: uppercase;
+  }
+  .forgot a:hover{
+      /* 设置忘记密码容器中的链接在鼠标悬停时颜色变为 #DBAC76，无下划线 */
+      color:#DBAC76;
+      text-decoration:none;
+  }
+  .login-copyright{
+      /* 设置登录版权容器的顶部外边距为 3em，底部外边距为 0，左侧外边距为 0 */
+      margin:3em 0 0 0;
+  }
+  .login-copyright p{
+      /* 设置登录版权容器中的段落文本居中对齐 */
+      text-align:center;
+  }
+  .signup-text{
+      /* 设置注册文本容器的顶部外边距为 2em，底部外边距为 0，左侧外边距为 0，文本居中对齐 */
+      margin: 2em 0 0 0;
+      text-align: center;
+  }
+  .signup-text a{
+      /* 设置注册文本容器中的链接字体大小为 0.75em，颜色为 #2DCB74，显示为块级元素，文本转换为大写 */
+      font-size:.75em;
+      color: #2DCB74;
+      display: block;
+      text-transform: uppercase;
+  }
+  .signup-text a:hover{
+      /* 设置注册文本容器中的链接在鼠标悬停时颜色变为 #DBAC76，无下划线 */
+      color: #DBAC76;
+      text-decoration: none;
+  }
+  .login-info h2{
+      /* 设置登录信息容器中的 h2 元素的颜色为 #999，字体大小为 0.875em，外边距为上下 1em，文本居中对齐 */
+      color: #999;
+      font-size:.875em;
+      margin:1em 0;
+      text-align:center;
+  }
+  .login-icons ul {
+      /* 设置登录图标容器中的无序列表内边距和外边距为 0，文本居中对齐 */
+      text-align:center;
+      margin:0;
+      padding:0;
+  }
+  .login-icons ul li{
+      /* 设置登录图标容器中的无序列表项显示为内联块元素，左右外边距为 1em */
+      display: inline-block;
+      margin: 0 1em;
+  }
+  .login-icons ul li a{
+      /* 设置登录图标容器中的无序列表项中的链接显示为块级元素 */
+      display:block;
+  }
+  .login-icons i.fa.fa-facebook,.login-icons i.fa.fa-twitter,.login-icons i.fa.fa-google-plus,.login-icons i.fa.fa-dribbble {
+      /* 设置登录图标容器中的 Facebook、Twitter、Google+和 Dribbble 图标字体大小为 1.5em，颜色为白色，宽度为 40px，高度为 40px，行高为 40px，垂直居中对齐，背景颜色为 #3b5998，边框半径为 50%，包括浏览器前缀的边框半径 */
+      font-size: 1.5em;
+      color: #FFFFFF;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      vertical-align: middle;
+      background: #3b5998;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+  }
+  .login-icons i.fa.fa-twitter{
+      /* 设置登录图标容器中的 Twitter 图标背景颜色为 #55acee */
+      background:#55acee;
+  }
+  .login-icons i.fa.fa-google-plus{
+      /* 设置登录图标容器中的 Google+图标背景颜色为 #dc4e41 */
+      background:#dc4e41;
+  }
+  .login-icons i.fa.fa-dribbble{
+      /* 设置登录图标容器中的 Dribbble 图标背景颜色为 #ea4c89 */
+      background:#ea4c89;
+  }
+  .forgot-grid{
+      /* 设置忘记密码网格容器向左浮动 */
+      float:left;
+  }
+  .forgot-grid ul {
+      /* 设置忘记密码网格容器中的无序列表内边距和外边距为 0 */
+      margin: 0;
+      padding: 0;
+  }
+  .forgot-grid ul li {
+      /* 设置忘记密码网格容器中的无序列表项列表样式为无，显示为内联块元素 */
+      list-style: none;
+      display: inline-block;
+  }
+  .forgot-grid ul li input[type="checkbox"] {
+      /* 设置忘记密码网格容器中的无序列表项中的复选框不显示 */
+      display: none;
+  }
+  .forgot-grid ul li input[type="checkbox"]+label {
+      /* 设置忘记密码网格容器中的无序列表项中的复选框后的标签的位置为相对定位，左边距为 31px，边框为白色，颜色为 #353535，显示为内联块元素，鼠标指针为指针形状，字体大小为 0.75em，字体粗细为正常，文本转换为大写 */
+      position: relative;
+      padding-left: 31px;
+      border: aliceblue;
+      color: #353535;
+      display: inline-block;
+      cursor: pointer;
+      font-size:.75em;
+      font-weight: normal;
+      text-transform: uppercase;
+  }
+  .forgot-grid ul li input[type="checkbox"]+label span:first-child {
+      /* 设置忘记密码网格容器中的无序列表项中的复选框后的标签中的第一个 span 元素的宽度为 17px，高度为 17px，显示为内联块元素，边框为 2px 实线 #C8C8C8，位置为绝对定位，左边距为 0，底部距离为 4px，顶部距离为 0 */
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      border: 2px solid #C8C8C8;
+      position: absolute;
+      left: 0;
+      bottom: 4px;
+      top:0;
+  }
+  .forgot-grid ul li input[type="checkbox"]:checked+label span:first-child:before {
+      /* 设置忘记密码网格容器中的无序列表项中的复选框被选中后，其后面的标签中的第一个 span 元素的伪元素的内容为空字符串，背景图片为 url(../images/tick.png)不重复，位置为绝对定位，左边距为 1px，顶部距离为 2px，字体大小为 10px，宽度为 10px，高度为 10px */
+      content: "";
+      background: url(../images/tick.png)no-repeat;
+      position: absolute;
+      left: 1px;
+      top: 2px;
+      font-size: 10px;
+      width: 10px;
+      height: 10px;
+  }
+  
+  
+  /*-- 媒体响应式设计，由于视频模块删除，部分不需要不需要注释 --*/
+  
+  
+  
+  
+  
+  
+  
+  @media (max-width:1440px){
+      /* 当屏幕宽度小于等于 1440px 时的样式 */
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表向左偏移 45% */
+          left: 45%;
+      }
+     .banner-bottom {
+          /* 设置底部横幅向左偏移 9% */
+          left: 9%;
+      }
+  }
+  @media (max-width:1366px){
+      /* 当屏幕宽度小于等于 1366px 时的样式 */
+     .banner-bottom {
+          /* 设置底部横幅向左偏移 7% */
+          left: 7%;
+      }
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表向左偏移 44% */
+          left: 44%;
+      }
+  }
+  @media (max-width:1280px){
+      /* 当屏幕宽度小于等于 1280px 时的样式 */
+     .banner-bottom {
+          /* 设置底部横幅向左偏移 3% */
+          left: 3%;
+      }
+  }
+  @media (max-width:1080px){
+      /* 当屏幕宽度小于等于 1080px 时的样式 */
+     .top-header-right {
+          /* 设置顶部头部右侧部分宽度为 27% */
+          width: 27%;
+      }
+     .information-grid-info h4,.team-grid h4 {
+          /* 设置信息网格信息部分和团队网格部分的 h4 标题字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分背景图片为 url(../images/5.png)，不重复，从 182px 0px 位置开始显示，背景颜色为 #2DCB74，背景图片大小为 76% */
+          background: url(../images/5.png) no-repeat 182px 0px #2DCB74;
+          background-size: 76%;
+      }
+     .banner-bottom-right {
+          /* 设置底部横幅右侧部分背景图片为 url(../images/4.png)，不重复，从 294px 0px 位置开始显示，背景颜色为 #D2D4D4，重要声明背景图片大小为 45% */
+          background: url(../images/4.png) no-repeat 294px 0px #D2D4D4!important;
+          background-size: 45%!important;
+      }
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表向左偏移 42% */
+          left: 42%;
+      }
+     .contact-form input[type="text"] {
+          /* 设置联系表单中的文本输入框宽度为 31.6% */
+          width: 31.6%;
+      }
+     .grid figure h3 {
+          /* 设置网格中的 figure 元素中的 h3 标题字体大小为 1.2em */
+          font-size: 1.2em;
+      }
+     .login-body {
+          /* 设置登录主体部分宽度为 45% */
+          width: 45%;
+      }
+  }
+  @media (max-width:1024px){
+      /* 当屏幕宽度小于等于 1024px 时的样式 */
+     .banner-bottom {
+          /* 设置底部横幅向左偏移 2% */
+          left: 2%;
+      }
+     .login-body {
+          /* 设置登录主体部分宽度为 55% */
+          width: 55%;
+      }
+  }
+  @media (max-width:991px){
+      /* 当屏幕宽度小于等于 991px 时的样式 */
+     .top-header-left {
+          /* 设置顶部头部左侧部分宽度为 64% */
+          width: 64%;
+      }
+     .top-header-right {
+          /* 设置顶部头部右侧部分宽度为 33% */
+          width: 33%;
+      }
+     .top-nav ul li a {
+          /* 设置顶部导航列表项中的链接内边距为上下 1.4em */
+          padding: 1.4em;
+      }
+     .logo {
+          /* 设置 logo 宽度为 140px */
+          width: 140px;
+      }
+     .banner {
+          /* 设置横幅部分内边距为上下 3em 和底部 8em */
+          padding: 3em 0 8em;
+      }
+     .slider-info {
+          /* 设置滑块信息部分的顶部外边距为 3em */
+          margin: 3em 0 0 0;
+      }
+     .more-button {
+          /* 设置更多按钮的顶部外边距为 4em 和底部外边距为 1em */
+          margin: 4em 0 1em 0;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分为向左浮动，宽度为 50%，内边距为上下左右各 1.5em */
+          float: left;
+          width: 50%;
+          padding: 1.5em;
+      }
+     .banner-bottom {
+          /* 设置底部横幅的位置为继承，内边距为上下 3em */
+          position: inherit;
+          padding: 3em 0;
+      }
+     .left-border-info {
+          /* 设置左边框信息部分宽度为 45%，向左偏移 6% */
+          width: 45%;
+          left: 6%;
+      }
+     .left-border-info p {
+          /* 设置左边框信息部分的段落字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .left-border {
+          /* 设置左边框高度为 170px */
+          height: 170px;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分背景图片为 url(../images/5.png)，不重复，从 160px 0px 位置开始显示，背景颜色为 #2DCB74，背景图片大小为 76% */
+          background: url(../images/5.png) no-repeat 160px 0px #2DCB74;
+          background-size: 76%;
+      }
+     .banner-bottom-right {
+          /* 设置底部横幅右侧部分背景图片为 url(../images/4.png)，不重复，从 221px 0px 位置开始显示，背景颜色为 #D2D4D4，重要声明背景图片大小为 46% */
+          background: url(../images/4.png) no-repeat 221px 0px #D2D4D4!important;
+          background-size: 46%!important;
+      }
+     .information {
+          /* 设置信息部分内边距为上下左右各 0em 和底部 4em */
+          padding: 0em 0 4em 0;
+      }
+     .information-heading p,.popular-heading p,.about-heading p,.codes-heading p,.gallery-heading p,.blog-heading p,.contact-heading p {
+          /* 设置信息标题部分、流行标题部分、关于标题部分、代码标题部分、画廊标题部分、博客标题部分和联系标题部分的段落宽度为 100% */
+          width: 100%;
+      }
+     .information-grid {
+          /* 设置信息网格部分底部外边距为 1em */
+          margin-bottom: 1em;
+      }
+     .information-grid:nth-child(3){
+          /* 设置信息网格部分中的第三个子元素底部外边距为 0 */
+          margin-bottom:0;
+      }
+     .popular-slide-info h4 {
+          /* 设置流行滑块信息部分的 h4 标题字体大小为 4em */
+          font-size: 4em;
+      }
+     .popular-slide-info p {
+          /* 设置流行滑块信息部分的段落宽度为 66% */
+          width: 66%;
+      }
+     .popular-slide-info {
+          /* 设置流行滑块信息部分背景图片为 url(../images/9.jpg)，不重复，从 0px -49px 位置开始显示 */
+          background: url(../images/9.jpg) no-repeat 0px -49px;
+      }
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表顶部位置为 60% */
+          top: 60%;
+      }
+     .popular-grid p {
+          /* 设置流行网格部分的段落顶部外边距为 1em */
+          margin: 1em 0 0 0;
+      }
+     .popular-grid {
+          /* 设置流行网格部分底部外边距为 1em */
+          margin-bottom: 1em;
+      }
+     .popular-grid:nth-child(3) {
+          /* 设置流行网格部分中的第三个子元素底部外边距为 0 */
+          margin-bottom: 0;
+      }
+     .footer-nav:nth-child(2){
+          /* 设置底部导航部分中的第二个子元素底部外边距为 2em */
+          margin:2em 0;
+      }
+     .team-grid {
+          /* 设置团队网格部分向左浮动，宽度为 33.33% */
+          float: left;
+          width: 33.33%;
+      }
+     .information-grid-info h4,.team-grid h4 {
+          /* 设置信息网格信息部分和团队网格部分的 h4 标题字体大小为 1.4em */
+          font-size: 1.4em;
+      }
+      ul.dropdown-menu {
+          /* 设置下拉菜单顶部位置为 4.5em */
+          top: 4.5em;
+      }
+     .dropdown-menu > li > a {
+          /* 设置下拉菜单中的列表项中的链接内边距为上下 3px 和左右 33px，重要声明 */
+          padding: 3px 33px!important;
+      }
+     .gallery-grid {
+          /* 设置画廊网格部分宽度为 50%，向左浮动，底部外边距为 1em */
+          width: 50%;
+          float: left;
+          margin-bottom: 1em;
+      }
+     .Categories {
+          /* 设置分类部分顶部外边距为 2em 和底部外边距为 0 和左边距为 0 */
+          margin: 2em 0 0 0;
+      }
+     .comments-left {
+          /* 设置评论部分左侧部分宽度为 20%，向左浮动 */
+          width: 20%;
+          float: left;
+      }
+     .comments-right {
+          /* 设置评论部分右侧部分向左浮动 */
+          float: left;
+      }
+     .comments {
+          /* 设置评论部分顶部外边距为 2em 和底部外边距为 0 和左边距为 0 */
+          margin: 2em 0 0 0;
+      }
+     .comments h3 {
+          /* 设置评论部分的标题顶部外边距为 0 和底部外边距为 0em 和左边距为 0 */
+          margin: 0 0 0em 0;
+      }
+     .address {
+          /* 设置地址部分顶部外边距为 2em 和底部外边距为 0 和左边距为 0 */
+          margin: 2em 0 0;
+      }
+     .address-grids{
+          /* 设置地址网格部分底部外边距为 1em 和顶部外边距为 0 和左边距为 0 */
+          margin:0 0 1em 0;
+      }
+     .contact-infom {
+          /* 设置联系信息部分顶部外边距为 1em 和底部外边距为 0 和左边距为 0 */
+          margin: 1em 0 0 0;
+      }
+     .contact-form input[type="text"] {
+          /* 设置联系表单中的文本输入框宽度为 30.6% */
+          width: 30.6%;
+      }
+  }
+  
+  
+  
+  
+  
+  /* 当屏幕宽度最大为800px时，应用以下样式 */  
+  @media (max-width:800px){  
+      /* 将类名为callbacks_tabs和callbacks2_tabs的ul下的li元素设置为内联块级元素，并去除外边距 */  
+      ul.callbacks_tabs.callbacks2_tabs li {  
+          display: inline-block;  
+          margin: 0;  
+      }  
+      /* 将类名为callbacks_tabs和callbacks2_tabs的ul元素的位置设置为距离左边46% */  
+      ul.callbacks_tabs.callbacks2_tabs {  
+          left: 46%;  
+      }  
+  }  
+    
+  /* 当屏幕宽度最大为768px时，应用以下样式 */  
+  @media (max-width:768px){  
+      /* 设置.slider-info下的h3元素的字体大小为3em */  
+      .slider-info h3 {  
+          font-size: 3em;  
+      }  
+      /* 将.callbacks_tabs元素的位置设置为距离顶部112%，距离右边47% */  
+      .callbacks_tabs {  
+          top: 112%;  
+          right: 47%;  
+      }  
+      /* 设置.banner元素的内边距为上下3em，左右0，底部6em */  
+      .banner {  
+          padding: 3em 0 6em;  
+      }  
+      /* 设置.popular-slide-info元素的背景图片，并使其覆盖整个容器 */  
+      .popular-slide-info {  
+          background: url(../images/9.jpg) no-repeat 0px 0;  
+          min-height: 360px;  
+          background-size: cover !important;  
+      }  
+      /* 为.popular-slide1元素设置背景图片，并使其覆盖整个容器 */  
+      .popular-slide1 {  
+          background: url(../images/10.jpg) no-repeat 0px 0px !important;  
+          background-size: cover !important;  
+      }  
+      /* 为.popular-slide2元素设置背景图片，并使其覆盖整个容器 */  
+      .popular-slide2 {  
+          background: url(../images/11.jpg) no-repeat 0px 0px !important;  
+          background-size: cover !important;  
+      }  
+  }  
+    
+  /* 当屏幕宽度最大为640px时，应用以下样式 */  
+  @media (max-width:640px){  
+      /* 设置.top-header-left下的p元素的外边距为上下0，左边14em，并设置字体大小为0.6em */  
+      .top-header-left p {  
+          margin: 0.5em 0 0 14em;  
+          font-size: .6em;  
+      }  
+      /* 设置.top-header-right-info下的ul的li元素的外边距为左右0.1em */  
+      .top-header-right-info ul li {  
+          margin: 0 .1em;  
+      }  
+      /* 设置.logo元素的宽度为131px */  
+      .logo {  
+          width: 131px;  
+      }  
+      /* 将.top-nav下的ul的li元素设置为块级元素，去除外边距和浮动 */  
+      .top-nav ul li {  
+          display: block;  
+          margin: 0;  
+          float: none;  
+      }  
+      /* 去除.top-nav下的ul的内边距和外边距 */  
+      .top-nav ul {  
+          padding: 0;  
+          margin: 0;  
+      }  
+      /* 设置.navbar-default下的.navbar-nav的li的a元素的文本对齐方式为居中，去除边框和阴影 */  
+      .navbar-default .navbar-nav > li > a {  
+          text-align: center;  
+          border: none;  
+          box-shadow: 0 0 0;  
+      }  
+      /* 设置.top-nav下的ul的li的a元素的内边距为上下1em */  
+      .top-nav ul li a {  
+          padding: 1em 0;  
+      }  
+      /* 设置.caret元素的外边距左边为6px */  
+      .caret {  
+          margin-left: 6px;  
+      }  
+      /* 设置.slider-info下的h3元素的字体大小为2em */  
+      .slider-info h3 {  
+          font-size: 2em;  
+      }  
+      /* 设置.banner-bottom-left元素的背景图片和位置，以及背景大小 */  
+      .banner-bottom-left {  
+          background: url(../images/5.png) no-repeat 117px 0px #2DCB74;  
+          background-size: 76%;  
+      }  
+      /* 设置.banner-bottom-right元素的背景图片和位置，以及背景大小 */  
+      .banner-bottom-right {  
+          background: url(../images/4.png) no-repeat 166px 0px #D2D4D4 !important;  
+          background-size: 55% !important;  
+      }  
+      /* 设置.information-heading h3和.popular-heading h3的字体大小为2em */  
+      .information-heading h3, .popular-heading h3 {  
+          font-size: 2em;  
+      }  
+      /* 设置.popular-slide元素的外边距为上下2em，左右0 */  
+      .popular-slide {  
+          margin: 2em 0 0 0;  
+      }  
+      /* 设置.popular-slide-info下的p元素的宽度为86% */  
+      .popular-slide-info p {  
+          width: 86%;  
+      }  
+      /* 将类名为callbacks_tabs和callbacks2_tabs的ul元素的位置设置为距离左边45% */  
+      ul.callbacks_tabs.callbacks2_tabs {  
+          left: 45%;  
+      }  
+      /* 设置.about-heading h2, .codes-heading h2, .gallery-heading h2, .blog-heading h2, .contact-heading h2的字体大小为2em */  
+      .about-heading h2, .codes-heading h2, .gallery-heading h2, .blog-heading h2, .contact-heading h2 {  
+          font-size: 2em;  
+      }  
+      /* 设置.information-grid-info h4和.team-grid h4的字体大小为1.1em */  
+      .information-grid-info h4, .team-grid h4 {  
+          font-size: 1.1em;  
+      }  
+      /* 设置.navbar-default下的.navbar-nav的打开的.dropdown-menu的li的a元素的文本对齐方式为居中 */  
+      .navbar-default .navbar-nav .open .dropdown-menu > li > a {  
+          text-align: center;  
+      }  
+      /* 设置.grid下的figure的figcaption的内边距为1em */  
+      .grid figure figcaption {  
+          padding: 1em;  
+      }  
+      /* 设置.contact-form下的input类型为text的元素的宽度为100% */  
+      .contact-form input[type="text"] {  
+          width: 100%;  
+      }  
+      /* 设置.contact-form下的input类型为email的元素的宽度为100%，并设置其外边距为上下0，左右0，底部1em */  
+      .contact-form input[type="email"] {  
+          width: 100%;  
+          margin: 0 0 1em 0;  
+      }  
+      /* 设置.login-heading的内边距为上下2em */  
+      .login-heading {  
+          padding: 2em 0em;  
+      }  
+      /* 设置.login-body的宽度为63% */  
+      .login-body {  
+          width: 63%;  
+      }  
+  }
+  
+  @media (max-width:480px){
+      /* 当屏幕宽度小于等于 480px 时的样式 */
+     .logo {
+          /* 设置 logo 宽度为 163px */
+          width: 163px;
+      }
+     .top-header-left p {
+          /* 设置顶部头部左侧部分的段落外边距为上下 0.5em 和左边距为 18em */
+          margin: 0.5em 0 0 18em;
+      }
+     .top-header-right {
+          /* 设置顶部头部右侧部分宽度为 23% */
+          width: 23%;
+      }
+     .slider-info {
+          /* 设置滑块信息部分的顶部外边距为 2em */
+          margin: 2em 0 0 0;
+      }
+     .slider-info p {
+          /* 设置滑块信息部分的段落字体大小为 0.9em */
+          font-size:.9em;
+      }
+     .more-button {
+          /* 设置更多按钮的顶部外边距为 3em 和底部外边距为 1em */
+          margin: 3em 0 1em 0;
+      }
+     .more-button a {
+          /* 设置更多按钮中的链接内边距为上下 0.5em 和左右 2em */
+          padding:.5em 2em;
+      }
+     .callbacks_nav {
+          /* 设置回调导航部分宽度为 32px */
+          width: 32px;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分不浮动，宽度为 100% */
+          float: none;
+          width: 100%;
+      }
+     .banner-bottom-right{
+          /* 设置底部横幅右侧部分的顶部外边距为 1em 和底部外边距为 0 和左边距为 0 */
+          margin:1em 0 0 0;
+      }
+     .left-border-info {
+          /* 设置左边框信息部分宽度为 30%，向左偏移 5%，顶部位置为 7% */
+          width: 30%;
+          left: 5%;
+          top: 7%;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分背景图片为 url(../images/5.png)，不重复，从 185px 0px 位置开始显示，背景颜色为 #2DCB74，背景图片大小为 64% */
+          background: url(../images/5.png) no-repeat 185px 0px #2DCB74;
+          background-size: 64%;
+      }
+     .banner-bottom-right {
+          /* 设置底部横幅右侧部分背景图片为 url(../images/4.png)，不重复，从 264px 0px 位置开始显示，背景颜色为 #D2D4D4，重要声明背景图片大小为 38% */
+          background: url(../images/4.png) no-repeat 264px 0px #D2D4D4!important;
+          background-size: 38%!important;
+      }
+     .information-grids {
+          /* 设置信息网格部分的顶部外边距为 3em */
+          margin: 3em 0 0 0;
+      }
+     .information-heading p,.popular-heading p,.about-heading p,.codes-heading p,.gallery-heading p,.blog-heading p,.contact-heading p {
+          /* 设置信息标题部分、流行标题部分、关于标题部分、代码标题部分、画廊标题部分、博客标题部分和联系标题部分的段落字体大小为 0.9em */
+          font-size:.9em;
+      }
+     .popular-slide-info h4 {
+          /* 设置流行滑块信息部分的 h4 标题字体大小为 3em */
+          font-size: 3em;
+      }
+     .popular-slide-info {
+          /* 设置流行滑块信息部分的最小高度为 340px */
+          min-height: 340px;
+      }
+     .border {
+          /* 设置边框部分宽度为 10% */
+          width: 10%;
+      }
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表向左偏移 42%，顶部位置为 53% */
+          left: 42%;
+          top: 53%;
+      }
+     .banner-bottom {
+          /* 设置底部横幅的内边距为上下 2em */
+          padding: 2em 0;
+      }
+     .popular {
+          /* 设置流行部分的内边距为上下 2em */
+          padding: 2em 0;
+      }
+     .footer {
+          /* 设置底部部分的内边距为上下 2em */
+          padding: 2em 0;
+      }
+     .about,.codes,.gallery,.blog,.contact,.login {
+          /* 设置关于部分、代码部分、画廊部分、博客部分、联系部分和登录部分的内边距为上下 2em 和顶部内边距为 0 */
+          padding: 2em 0 0 0;
+      }
+     .team {
+          /* 设置团队部分的内边距为上下 2em */
+          padding: 2em 0;
+      }
+     .team-grid {
+          /* 设置团队网格部分不浮动，宽度为 100% */
+          float: none;
+          width: 100%;
+      }
+     .information-grid-info h4,.team-grid h4 {
+          /* 设置信息网格信息部分和团队网格部分的 h4 标题字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .gallery-grid {
+          /* 设置画廊网格部分宽度为 100%，不浮动 */
+          width: 100%;
+          float: none;
+      }
+     .media-left.response-text-left {
+          /* 设置媒体左侧响应文本左侧部分宽度为 22% */
+          width: 22%;
+      }
+     .login-body {
+          /* 设置登录主体部分宽度为 85% */
+          width: 85%;
+      }
+     .navbar-toggle {
+          /* 设置导航栏切换按钮的右边距为 0 */
+          margin-right: 0;
+      }
+     .left-single {
+          /* 设置左侧单页部分的右边距为 0 */
+          padding-right: 0;
+      }
+  }
+  @media (max-width:414px){
+      /* 当屏幕宽度小于等于 414px 时的样式 */
+     .logo {
+          /* 设置 logo 宽度为 110px，位置为继承，向左浮动 */
+          width: 110px;
+          position: inherit;
+          float: left;
+      }
+     .navbar-toggle {
+          /* 设置导航栏切换按钮的顶部外边距为 21px，右边距为 0 */
+          margin-top: 21px;
+          margin-right: 0;
+      }
+     .top-header-left {
+          /* 设置顶部头部左侧部分宽度为 43% */
+          width: 43%;
+      }
+     .top-header-left p {
+          /* 设置顶部头部左侧部分的段落外边距为上下 0.5em 和左边距为 0em */
+          margin: 0.5em 0 0 0em;
+      }
+     .top-header-right {
+          /* 设置顶部头部右侧部分宽度为 54% */
+          width: 54%;
+      }
+     .banner {
+          /* 设置横幅部分的内边距为上下 2em 和底部 5em */
+          padding: 2em 0 5em;
+      }
+     .callbacks_nav {
+          /* 设置回调导航部分的顶部位置为 74% */
+          top: 74%;
+      }
+     .slider h2 {
+          /* 设置滑块部分的 h2 标题字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .slider-info p {
+          /* 设置滑块信息部分的段落宽度为 90%，水平居中显示 */
+          width: 90%;
+          margin: 0 auto;
+      }
+     .more-button a {
+          /* 设置更多按钮中的链接内边距为上下 0.5em 和左右 2em，字体大小为 0.8em */
+          padding:.5em 2em;
+          font-size:.8em;
+      }
+     .left-border-info {
+          /* 设置左边框信息部分宽度为 36% */
+          width: 36%;
+      }
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表向左偏移 41% */
+          left: 41%;
+      }
+     .top-nav ul li a {
+          /* 设置顶部导航列表项中的链接内边距为上下 0.5em 和左右 0 */
+          padding:.5em 0;
+      }
+     .login-heading {
+          /* 设置登录标题部分的内边距为上下 1em */
+          padding: 1em 0em;
+      }
+     .login-info {
+          /* 设置登录信息部分的内边距为上下 2em、左右 1.5em 和底部 1em */
+          padding: 2em 1.5em 1em;
+      }
+     .login-icons ul li {
+          /* 设置登录图标部分的无序列表项的左右外边距为 0.2em */
+          margin: 0 0.2em;
+      }
+      nav.navbar.navbar-default {
+          /* 设置导航栏宽度为 70%，重要声明，向右浮动，重要声明 */
+          width: 70%!important;
+          float: right!important;
+      }
+  }
+  
+  @media (max-width:384px){
+      /* 当屏幕宽度小于等于 384px 时的样式 */
+      nav.navbar.navbar-default {
+          /* 设置导航栏宽度为 66%，重要声明 */
+          width: 66%!important;
+      }
+     .left-border-info {
+          /* 设置左边框信息部分宽度为 40% */
+          width: 40%;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分背景图片为 url(../images/5.png)，不重复，从 141px 0px 位置开始显示，背景颜色为 #2DCB74，背景图片大小为 75% */
+          background: url(../images/5.png) no-repeat 141px 0px #2DCB74;
+          background-size: 75%;
+      }
+     .banner-bottom-right {
+          /* 设置底部横幅右侧部分背景图片为 url(../images/4.png)，不重复，从 199px 0px 位置开始显示，背景颜色为 #D2D4D4，重要声明背景图片大小为 49% */
+          background: url(../images/4.png) no-repeat 199px 0px #D2D4D4!important;
+          background-size: 49%!important;
+      }
+  }
+  @media (max-width:320px){
+      /* 当屏幕宽度小于等于 320px 时的样式 */
+     .top-header-right {
+          /* 设置顶部头部右侧部分宽度为 35% */
+          width: 35%;
+      }
+     .top-header-left {
+          /* 设置顶部头部左侧部分宽度为 54% */
+          width: 54%;
+      }
+     .border {
+          /* 设置边框部分的外边距为上下 7px，水平居中显示 */
+          margin: 7px auto 0;
+      }
+     .slider-info h3 {
+          /* 设置滑块信息部分的 h3 标题字体大小为 1.3em */
+          font-size: 1.3em;
+      }
+     .callbacks_nav {
+          /* 设置回调导航部分的顶部位置为 43%，宽度为 20px */
+          top: 43%;
+          width: 20px;
+      }
+     .more-button {
+          /* 设置更多按钮的顶部外边距为 1.5em 和底部外边距为 1em */
+          margin: 1.5em 0 1em 0;
+      }
+     .callbacks_tabs {
+          /* 设置回调标签部分的顶部位置为 103%，向右偏移 41% */
+          top: 103%;
+          right: 41%;
+      }
+     .banner {
+          /* 设置横幅部分背景图片为 url(../images/2.jpg)，不重复，从 -206px 0px 位置开始显示，背景图片铺满整个容器，内边距为上下 2em 和底部 3em */
+          background: url(../images/2.jpg) no-repeat -206px 0px;
+          background-size: cover;
+          padding: 2em 0 3em;
+      }
+     .left-border-info p {
+          /* 设置左边框信息部分的段落字体大小为 1.3em */
+          font-size: 1.3em;
+      }
+     .left-border-info {
+          /* 设置左边框信息部分宽度为 42% */
+          width: 42%;
+      }
+     .left-border {
+          /* 设置左边框高度为 124px */
+          height: 124px;
+      }
+     .banner-bottom-left {
+          /* 设置底部横幅左侧部分背景图片为 url(../images/5.png)，不重复，从 108px 0px 位置开始显示，背景颜色为 #2DCB74，背景图片大小为 73% */
+          background: url(../images/5.png) no-repeat 108px 0px #2DCB74;
+          background-size: 73%;
+      }
+     .banner-bottom-right {
+          /* 设置底部横幅右侧部分背景图片为 url(../images/4.png)，不重复，从 161px 0px 位置开始显示，背景颜色为 #D2D4D4，重要声明背景图片大小为 48% */
+          background: url(../images/4.png) no-repeat 161px 0px #D2D4D4!important;
+          background-size: 48%!important;
+      }
+     .information-heading h3,.popular-heading h3 {
+          /* 设置信息标题部分和流行标题部分的 h3 标题字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .information-grid-info {
+          /* 设置信息网格信息部分的内边距为上下左右各 1em */
+          padding: 1em;
+      }
+     .information-grid-info p,.team-grid p {
+          /* 设置信息网格信息部分和团队网格部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .information-grid-info h4,.team-grid h4 {
+          /* 设置信息网格信息部分和团队网格部分的 h4 标题字体大小为 1.2em */
+          font-size: 1.2em;
+      }
+     .popular-slide-info h4 {
+          /* 设置流行滑块信息部分的 h4 标题字体大小为 2em */
+          font-size: 2em;
+      }
+     .popular-slide-info p {
+          /* 设置流行滑块信息部分的段落宽度为 95% */
+          width: 95%;
+      }
+     .popular-slide-info p {
+          /* 设置流行滑块信息部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .popular-slide-info {
+          /* 设置流行滑块信息部分的最小高度为 289px */
+          min-height: 289px;
+      }
+      ul.callbacks_tabs.callbacks2_tabs {
+          /* 设置回调标签列表的顶部位置为 50% */
+          top: 50%;
+      }
+     .popular-grids {
+          /* 设置流行网格部分的顶部外边距为 4em */
+          margin: 4em 0 0 0;
+      }
+     .popular-grid h5 {
+          /* 设置流行网格部分的 h5 标题字体大小为 1.2em */
+          font-size: 1.2em;
+      }
+     .popular-grid p {
+          /* 设置流行网格部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .footer-nav h4 {
+          /* 设置底部导航部分的 h4 标题字体大小为 1.3em */
+          font-size: 1.3em;
+      }
+     .footer-nav ul li a {
+          /* 设置底部导航部分的列表项中的链接字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .news-grid h6 {
+          /* 设置新闻网格部分的 h6 标题字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .copyright p {
+          /* 设置版权部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .top-nav ul li a {
+          /* 设置顶部导航部分的列表项中的链接字体大小为 0.875em */
+          font-size:.875em;
+      }
+     .about-heading h2,.codes-heading h2,.gallery-heading h2,.blog-heading h2,.contact-heading h2 {
+          /* 设置关于标题部分、代码标题部分、画廊标题部分、博客标题部分和联系标题部分的 h2 标题字体大小为 1.5em */
+          font-size: 1.5em;
+      }
+     .information-heading p,.popular-heading p,.about-heading p,.codes-heading p,.gallery-heading p,.blog-heading p,.contact-heading p {
+          /* 设置信息标题部分、流行标题部分、关于标题部分、代码标题部分、画廊标题部分、博客标题部分和联系标题部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .about-bottom p {
+          /* 设置关于底部部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .blog-top-grids {
+          /* 设置博客顶部网格部分的顶部外边距为 2em */
+          margin: 2em 0 0 0;
+      }
+     .blog-left-left p {
+          /* 设置博客左侧左侧部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .blog-left-right a {
+          /* 设置博客左侧右侧部分的链接字体大小为 1em */
+          font-size: 1em;
+      }
+     .blog-left-right p {
+          /* 设置博客左侧右侧部分的段落字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .blog-left {
+          /* 设置博客左侧部分的外边距为上下边距分别为 0em 和 1em */
+          margin: 0em 0 1em 0;
+      }
+     .Categories ul li a {
+          /* 设置分类部分的列表项中的链接字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .Categories h3 {
+          /* 设置分类部分的 h3 标题外边距为上下边距分别为 0 和 0.5em */
+          margin: 0 0.5em 0;
+      }
+     .media-left.response-text-left {
+          /* 设置媒体左侧响应文本左侧部分的宽度为 26% */
+          width: 26%;
+      }
+     .opinion form input[type="text"] {
+          /* 设置意见表单中的文本输入框字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .opinion form textarea {
+          /* 设置意见表单中的文本域字体大小为 0.8em */
+          font-size:.8em;
+      }
+     .map iframe {
+          /* 设置地图部分的 iframe 高度为 180px */
+          height: 180px;
+      }
+     .address p {
+          /* 设置地址部分的段落字体大小为 0.8em */
+          font-size: 0.8em;
+      }
+     .contact-infom p {
+          /* 设置联系信息部分的段落字体大小为 0.8em */
+          font-size: 0.8em;
+      }
+     .navbar-toggle {
+          /* 设置导航栏切换按钮的顶部外边距为 24px，字体大小为 0.8em */
+          margin-top: 24px;
+          font-size:.8em;
+      }
+     .login-heading h1 {
+          /* 设置登录标题部分的 h1 标题字体大小为 1.2em */
+          font-size: 1.2em;
+      }
+     .login-body {
+          /* 设置登录主体部分的宽度为 100% */
+          width: 100%;
+      }
+     .login-info input[type="text"],.login-info input[type="password"] {
+          /* 设置登录信息部分的文本输入框和密码输入框字体大小为 0.8em */
+          font-size:.8em;
+      }
+      nav.navbar.navbar-default {
+          /* 设置导航栏宽度为 59%，重要声明 */
+          width: 59%!important;
+      }
+  }
+
+  /**** 新增产品模块****/
+  .product {
+    padding:4em 0 3em;
+}
+.product-model-sec {
+    margin: 4em 0 0 0;
+    float: right;
+}
+.rsidebar {
+    display: block;
+    float: left;
+    margin: 4em 2em 0% 0;
+    width: 22%;
+}
+/*-----*/
+.b-link-stripe{
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+	font-weight: 300;
+	overflow:hidden;
+	width: 100%;
+}
+.b-link-stripe .b-wrapper{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	text-align:center;
+	color:#ffffff;
+	overflow:hidden;
+}
+.b-link-stripe:hover .b-line{
+	opacity:1;
+}
+.b-animate-go{
+	text-decoration:none;
+}
+.b-animate{
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	visibility: hidden;
+	font-size:1.1em;
+	font-weight:700;
+}
+.b-animate button{
+	padding:10px;
+	color:#fff;
+	font-size:0.8em;
+	cursor:pointer;
+	margin: 32% auto 0 auto;
+	display: block;
+	border:none;
+	width:60%;
+	text-decoration:none;
+	background:rgba(183, 183, 183, 0.93);
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+	text-transform:uppercase;
+}
+.glyphicon-zoom-in:before {
+  content: "\e015";
+  color:#fff;
+	font-size:0.9em;
+}
+.b-animate button:hover{
+	background:#989898;
+}
+/* lt-ie9 */
+.b-animate-go:hover .b-animate{
+	visibility:visible;
+}
+.b-from-left{
+	position: relative;
+	left: -100%;
+	background-size: 100% 100%;
+	top: 0px;
+	margin: 0;
+	min-height: 420px;
+}
+.b-animate-go:hover .b-from-left{
+	left:0;
+}
+.product-grid {
+	width: 30%;
+	margin: 0 3% 4% 0;
+	float: left;	
+	position: relative;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	min-height: 200px;
+	border-bottom:2px solid #fff;
+}
+.product-grid:hover {
+	z-index: 1;
+	border-bottom:2px solid #ed645c;
+}
+.more-product-info span {
+	color:#fff;
+	font-size:1em;
+	font-weight:500;
+	padding:5px 10px;
+	display: block;
+	background:#fa558f;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	cursor: pointer;
+	z-index: 999;
+}
+.products-row a:hover{
+	text-decoration:none;
+}
+.product-img img {
+	width: 100%;
+	padding:1em 2.5em 0; 
+}
+.product-info-cust {
+	padding: 0.8em 1.2em;
+} 
+.item_quantity {
+  margin: 1em 0;
+  font-size: 0.85em;
+  padding: 5px 10px;
+  display: block;
+      width: 51%;
+    float: left;
+}
+.item_add{
+	color:#fff;
+	text-decoration:none;
+	font-weight:600;
+	padding:0.5em 2em;	
+	display:inline-block;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-o-border-radius: 5px;
+	margin: 1.5em 16px 0px 0px;
+	background:#00a0dc;
+	border:none;
+	outline:none;
+}
+.prt_name{
+	padding: 0.8em 1.2em;
+	float:none;
+}
+.items{
+	margin:10px 0 0px 17px;
+}
+.item_add:hover {
+	background:#ed645c;
+	color: #fff;
+} 
+.product-info-price {
+	float: right;
+	background: #fff;
+	width: 27%;
+	text-align: center;
+	padding: 0.545em;
+}
+.product-info-cust h4{
+	color: #caccce;
+    font-size: 0.95em;
+    font-family: 'Dosis-Bold';
+    text-transform: uppercase;
+}
+.product-info-cust p{
+	 margin:5px 0;
+	 letter-spacing:1px;
+	 font-size:0.85em;
+	 color:#C7C7C7;
+}
+span.item_price{
+	color: #000;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 10px 0 5px;
+	display:block;
+}
+p.pric1 {
+    color: #ADADAD;
+    font-size: 0.95em;
+	display:inline-block;
+}
+p.disc {
+    color: rgba(7, 152, 40, 0.69);
+    font-size: 0.85em;
+	display:inline-block;
+}
+.tab-grids {
+	margin-top: 2em;
+}
+/*-- start scrollpane --*/
+.jspContainer{
+	overflow: hidden;
+	position: relative;
+}
+.jspPane{
+	position: absolute;
+	outline: none;
+	padding:5px 20px 20px 10px !important;
+}
+.jspVerticalBar{
+	position: absolute;
+	top: 0;
+	right:0px;
+	width:5px;
+	height: 100%;
+}
+.jspHorizontalBar{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+.jspCap{
+	display: none;
+}
+.jspHorizontalBar .jspCap{
+	float: left;
+}
+.jspTrack{
+	background: #f0f0f0;
+	position: relative;
+}
+.jspDrag{
+	background: #777777;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.jspHorizontalBar .jspTrack,.jspHorizontalBar .jspDrag{
+	float: left;
+	height: 100%;
+}
+.jspArrow{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+.jspArrow.jspDisabled{
+	cursor: default;
+	background: #80808d;
+}
+.jspVerticalBar .jspArrow{
+	height: 16px;
+}
+.jspHorizontalBar .jspArrow{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+.jspVerticalBar .jspArrow:focus{
+	outline: none;
+}
+.jspCorner{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+/*左侧导航栏设计*/
+ul.place{
+	margin: 5px 0;
+	background: #e3f1f2;
+	width: 100%;  
+	padding:0px 5px;
+	  cursor: pointer;
+}
+ul.place li{
+	display: inline-block;
+	padding: 6px;
+}
+ul.place li {
+	color: #8c8c8c;
+	text-decoration: none;
+	cursor: pointer;
+}
+ul.place li span{
+	color: #f02b63;
+}
+ul.place li.sort{
+	float:left;
+}
+ul.place li.by{
+	float:right;
+}
+.single-bottom p{
+	font-size:0.9em;
+	padding:2px 10px;
+}
+.possible-about p{
+	color:#727272;
+	font-size:1em;
+	line-height:1.5em;
+}
+.possible-about h4{
+	color:#7db122;
+	font-size:1.4em;
+	
+	font-weight:600;
+	   padding: 0 0 0.3em;
+}
+ul.dropdown-menu1 li {
+  list-style: none;
+}
+label.amount {
+  color: #7c8389;
+  margin-right: 5px;
+}
+span.amount {
+  color: #7c8389;
+}
+.product-model h2,h2.top,.contact h3{
+  font-size: 2.5em;
+  font-family: 'Dosis-Bold';
+  color: #333;
+  text-align:center;
+}
+ul.dropdown-menu1 li a:hover{
+	color:#000!important;	
+}
+.glyphicon-minus:before {
+    content: "\2212";
+    color: #fff;
+    font-size: 9px;
+    background: #00a0dc;
+    padding: 1px 6px;
+    margin-right: 5px;
+}
+.glyphicon-minus {
+    top: -1px!important;
+}
+/**/
+.sky-form .rating {
+	font-size: 15px;
+	color: #404040;
+}
+.sky-form .rating:last-child {
+	margin-bottom: 0;
+}
+.sky-form .rating input {
+	position: absolute;
+	left: -9999px;
+}
+.sky-form .rating label {
+	display: block;
+	float: left;
+	height: -4px;
+	cursor: pointer;
+}
+.rating {
+	margin: 6px 0 0 0em;
+}
+
+.sky-form [class^="icon-"] {
+	display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/star.png) 0 -3px;
+    float:left;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+/*** 购物车模块设计***/
+.ckeckout{
+	padding:6em 0px;
+}
+.close1,.close2,.close3{
+	background: url('../images/close.png') no-repeat 0px 0px;
+	cursor: pointer;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+    right: 5px;
+    top: 10px;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+}
+.check-in {
+	width:100%;
+	margin: 2em 0 2em;
+}
+ul.unit {
+    border: 1px solid #BCBBBB;
+    padding: 10px 10px;
+}
+ul.unit li {
+    display: inline-block;
+    width: 25%;
+    float: left;
+}
+ul.cart-header li p,ul.cart-header1 li p,ul.cart-header2 li p{
+    font-size: 11px;
+    line-height: 1.6em;
+    color: #999;
+    margin: 0;
+}
+ul.unit li span{
+	display:inline-block;
+	color:#000;
+	font-size:0.8em;
+	text-align:center;
+}
+ul.cart-header, ul.cart-header1 {
+    padding: 1em;
+    background: #f8f8f8;
+    border-bottom: 1px solid #181b2a;
+    margin-bottom: 20px;
+}
+ul.cart-header2{
+	padding:1em;
+	background:#f8f8f8;
+}
+ul.cart-header li, ul.cart-header1 li, ul.cart-header2 li {
+    display: inline-block;
+    width: 25%;
+    float: left;
+}
+ul.cart-header li span,ul.cart-header1 li span,ul.cart-header2 li span{
+	margin: 2.3em 0 0;
+	display: block;
+	color:#000;
+	font-size:15px;
+	text-align: left;
+}
+span.cost {
+    font-size: 1em !important;
+    margin-top: 1.4em !important;
+}
+.in-check {
+	margin-top: 2%;
+}
+.cart-header,.cart-header1,.cart-header2{
+	position:relative;
+}
+.cart-items {
+	padding: 0 1em;
+}
+.cart-items h3 {
+    font-size: 2em;
+    color: #000;
+    margin: 0 0 0 0;
+    font-family: 'BreeSerif-Regular';
+}
+.ckeck-top{
+	text-align:center;
+	margin-bottom:4%;
+}
+span.name {
+    font-size: 1em !important;
+    margin-top: 1.45em !important;
+}
+
+/*---确认付款信息----*/
+.contact {
+  padding-bottom: 3em;
+}
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1;
+}	
+.span_2_of_3 {
+	width: 70%;
+	padding:1.5%; 
+}
+.span_1_of_3 {
+	width: 30%;
+	padding:1.5%; 
+}
+.span_2_of_3  h4,
+.span_1_of_3  h4 {
+	font-size: 1.3em;
+	padding: 0.5em 0;
+	color: #00a0dc;
+}
+.contact-form{
+	position:relative;
+	padding-bottom:30px;
+}
+.contact-form div{
+	padding:5px 0;
+}
+.contact-form span{
+	display:block;
+	font-size: 0.9em;
+	padding-bottom:5px;
+	color: #012231;
+	text-transform: uppercase;
+}
+.contact-form input[type="text"],.contact-form textarea{
+		   padding: 10px;
+			display: block;
+			width: 98%;
+			border: none;
+			outline: none;
+			color: #464646;
+			font-size: 1.1em;
+			border: 1px solid rgba(85, 85, 85, 0.19);
+			-webkit-appearance:none;
+}
+.contact-form textarea{
+		resize:none;
+		height:120px;		
+}
+.contact-form input[type="submit"]{
+	background:#00a0dc;
+	color: #fff;
+	padding: 12px 30px;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	display: block;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	cursor:pointer;
+	border:2px solid #00a0dc;
+}
+.contact-form input[type="submit"]:hover{
+	background: transparent;
+	color: #00a0dc;
+	border:2px solid #00a0dc;
+}
+.company_address{
+	padding-top:26px;
+}
+.company_address p{
+	font-size: 1em;
+	color: rgba(85, 81, 81, 0.84);
+	line-height: 1.8em;
+}
+.company_address p span{
+	text-decoration:underline;
+	color:#012231;
+	cursor:pointer;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+.company_address p span:hover{
+	color:#00B895;
+}
+.map iframe{
+	width:100%;
+	border:none;
+}
+
+.w3ls_dresses_grid_left_grid h3 {
+    font-size: 1.5em;
+    color: #212121;
+    padding-left: 2em;
+    position: relative;
+    margin: 1em;
+	text-align:left;
+}
+.w3ls_dresses_grid_left_grid h3:before {
+    content: '';
+    background: #00e58b;
+    width: 10%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+.w3ls_dresses_grid_left_grid_sub {
+    border: 1px solid #E1E1E1;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2em 1.5em 1em;
+}
+.ecommerce_color ul li a,.ecommerce_dres-type ul li a{
+    font-size: .95em;
+    color: #212121;
+    text-decoration: none;
+}
+.ecommerce_color ul li a i {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 1em;
+    border-radius: 20px;
+    background: red;
+}
+.ecommerce_color ul li,.ecommerce_dres-type ul li {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+.ecommerce_color ul li:nth-child(2) a i {
+    background: brown;
+}
+.ecommerce_color ul li:nth-child(3) a i {
+    background: #ffd400;
+}
+.ecommerce_color ul li:nth-child(4) a i {
+    background: #d382ee;
+}
+.ecommerce_color ul li:nth-child(5) a i {
+    background: #ff5e00;
+}
+.ecommerce_color ul li:nth-child(6) a i {
+    background: #0000ff;
+}
+.dresses_img_hover {
+    margin-top: 40px;
+    position: relative;
+}
+.dresses_img_hover_pos {
+    position: absolute;
+    top: 26%;
+    left: 24px;
+}
+.dresses_img_hover_pos h4 {
+    color: #fff;
+    font-size: 25px;
+}
+.dresses_img_hover_pos h4 span {
+    display: block;
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 45px;
+}
+
+.women-set2{
+	margin:75px 0;
+}
